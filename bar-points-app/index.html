@@ -1,0 +1,1257 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101018">
+  <title>BarQuest 集點酒吧</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #101018;
+      --panel: #181820;
+      --panel-2: #20212b;
+      --line: #343645;
+      --text: #f7f3ea;
+      --muted: #aaa5b6;
+      --gold: #f5c451;
+      --cyan: #55d6c2;
+      --rose: #ef6f8f;
+      --lime: #a8df65;
+      --ink: #0c0d12;
+      --shadow: rgba(0, 0, 0, 0.34);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 15% 8%, rgba(239, 111, 143, 0.24), transparent 28%),
+        radial-gradient(circle at 90% 12%, rgba(85, 214, 194, 0.22), transparent 26%),
+        linear-gradient(180deg, #101018 0%, #15151d 54%, #0f1014 100%);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Segoe UI", sans-serif;
+      letter-spacing: 0;
+    }
+
+    button, input, select {
+      font: inherit;
+    }
+
+    button {
+      border: 0;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    .app {
+      width: min(100%, 440px);
+      min-height: 100vh;
+      margin: 0 auto;
+      background: rgba(16, 16, 24, 0.78);
+      border-left: 1px solid rgba(255, 255, 255, 0.06);
+      border-right: 1px solid rgba(255, 255, 255, 0.06);
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 92px;
+    }
+
+    header {
+      padding: 18px 18px 12px;
+      position: sticky;
+      top: 0;
+      z-index: 4;
+      background: rgba(16, 16, 24, 0.86);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background:
+        linear-gradient(135deg, rgba(245, 196, 81, 0.96), rgba(239, 111, 143, 0.94));
+      box-shadow: 0 12px 30px rgba(239, 111, 143, 0.22);
+      display: grid;
+      place-items: center;
+      color: #111;
+      font-weight: 900;
+      font-size: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 210px;
+    }
+
+    .points-pill {
+      background: #f7f0d8;
+      color: #19130b;
+      border: 2px solid #34260b;
+      border-radius: 999px;
+      padding: 8px 12px;
+      min-width: 108px;
+      text-align: right;
+      box-shadow: 0 8px 18px rgba(245, 196, 81, 0.18);
+    }
+
+    .points-pill strong {
+      display: block;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .points-pill span {
+      display: block;
+      font-size: 11px;
+      color: #6f5d2b;
+    }
+
+    .searchbar {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: 1fr 44px;
+      gap: 8px;
+    }
+
+    .searchbar input {
+      min-width: 0;
+      height: 44px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.07);
+      color: var(--text);
+      padding: 0 14px;
+      outline: none;
+    }
+
+    .icon-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: rgba(255, 255, 255, 0.09);
+      border: 1px solid var(--line);
+      color: var(--text);
+    }
+
+    main {
+      padding: 14px 14px 0;
+    }
+
+    .view { display: none; }
+    .view.active { display: block; }
+
+    .status-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .metric {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 8px;
+      padding: 10px;
+      min-height: 64px;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .metric strong {
+      display: block;
+      margin-top: 5px;
+      font-size: 18px;
+      line-height: 1.1;
+    }
+
+    .filters {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 0 0 10px;
+      scrollbar-width: none;
+    }
+
+    .filters::-webkit-scrollbar { display: none; }
+
+    .chip {
+      flex: 0 0 auto;
+      height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .chip.active {
+      background: var(--gold);
+      color: #1c1507;
+      border-color: #1c1507;
+      font-weight: 800;
+    }
+
+    .bar-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .bar-card, .character-card, .ledger-item, .draw-panel, .map-panel {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.045));
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      box-shadow: 0 14px 28px var(--shadow);
+    }
+
+    .bar-card {
+      padding: 12px;
+      display: grid;
+      grid-template-columns: 74px 1fr;
+      gap: 12px;
+    }
+
+    .bar-art {
+      width: 74px;
+      height: 104px;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      background: var(--accent);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .bar-art::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, transparent 0 42%, rgba(0, 0, 0, 0.5) 100%),
+        radial-gradient(circle at 36% 28%, rgba(255, 255, 255, 0.95) 0 6px, transparent 7px),
+        radial-gradient(circle at 62% 38%, rgba(255, 255, 255, 0.78) 0 4px, transparent 5px),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent);
+    }
+
+    .bar-art::after {
+      content: "";
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 16px;
+      height: 28px;
+      border-radius: 0 0 12px 12px;
+      border: 3px solid rgba(255, 255, 255, 0.82);
+      border-top: 0;
+    }
+
+    .bar-main {
+      min-width: 0;
+    }
+
+    .bar-head {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .bar-title {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.22;
+    }
+
+    .distance {
+      flex: 0 0 auto;
+      color: var(--cyan);
+      font-size: 12px;
+      padding: 4px 7px;
+      border-radius: 999px;
+      background: rgba(85, 214, 194, 0.12);
+      border: 1px solid rgba(85, 214, 194, 0.32);
+    }
+
+    .bar-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 8px 0;
+    }
+
+    .tag {
+      font-size: 11px;
+      color: #ddd7e8;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      padding: 4px 7px;
+    }
+
+    .bar-desc {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+      margin: 0 0 10px;
+    }
+
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .primary-btn, .secondary-btn {
+      height: 40px;
+      border-radius: 8px;
+      font-weight: 800;
+    }
+
+    .primary-btn {
+      background: var(--gold);
+      color: #17120b;
+    }
+
+    .secondary-btn {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .map-panel {
+      overflow: hidden;
+    }
+
+    .map-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+    }
+
+    .map-toolbar h2 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .map-canvas {
+      width: 100%;
+      aspect-ratio: 1 / 1.18;
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(135deg, #161721, #232536 55%, #14151c);
+      background-size: 38px 38px, 38px 38px, auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .road {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 999px;
+      transform-origin: center;
+    }
+
+    .road.a { width: 560px; height: 22px; top: 42%; left: -60px; transform: rotate(-18deg); }
+    .road.b { width: 520px; height: 16px; top: 66%; left: -42px; transform: rotate(12deg); }
+    .road.c { width: 18px; height: 470px; top: 8%; left: 62%; transform: rotate(8deg); }
+
+    .map-dot {
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      display: grid;
+      place-items: center;
+      border: 3px solid rgba(255, 255, 255, 0.92);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.34);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .map-dot.user {
+      width: 30px;
+      height: 30px;
+      background: var(--cyan);
+      color: #071513;
+      z-index: 2;
+    }
+
+    .map-dot.bar {
+      background: var(--gold);
+      color: #17120b;
+    }
+
+    .map-dot.selected {
+      background: var(--rose);
+      color: white;
+      width: 44px;
+      height: 44px;
+    }
+
+    .map-sheet {
+      padding: 12px;
+      display: grid;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .character-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .character-card {
+      padding: 10px;
+      min-height: 196px;
+      display: grid;
+      align-content: space-between;
+      gap: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .character-card.locked {
+      filter: grayscale(0.5);
+      color: rgba(247, 243, 234, 0.7);
+    }
+
+    .avatar {
+      height: 78px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--c1), var(--c2));
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      overflow: hidden;
+    }
+
+    .avatar::before {
+      content: "";
+      position: absolute;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.85);
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -42%);
+      box-shadow:
+        -18px -14px 0 -10px rgba(255, 255, 255, 0.9),
+        18px -14px 0 -10px rgba(255, 255, 255, 0.9),
+        0 22px 0 -17px rgba(0, 0, 0, 0.72);
+    }
+
+    .avatar::after {
+      content: "";
+      position: absolute;
+      width: 72px;
+      height: 12px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.2);
+      left: 50%;
+      bottom: 8px;
+      transform: translateX(-50%);
+    }
+
+    .character-card h3 {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.25;
+    }
+
+    .character-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .cost-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .small-btn {
+      height: 34px;
+      padding: 0 10px;
+      border-radius: 8px;
+      background: var(--cyan);
+      color: #061312;
+      font-weight: 900;
+    }
+
+    .small-btn[disabled], .primary-btn[disabled] {
+      opacity: 0.42;
+      cursor: not-allowed;
+    }
+
+    .draw-panel {
+      padding: 14px;
+      margin-bottom: 12px;
+      display: grid;
+      gap: 10px;
+      background:
+        linear-gradient(135deg, rgba(245, 196, 81, 0.14), rgba(239, 111, 143, 0.12)),
+        rgba(255, 255, 255, 0.06);
+    }
+
+    .draw-panel h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .draw-panel p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .ledger {
+      display: grid;
+      gap: 10px;
+    }
+
+    .ledger-item {
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .ledger-item h3 {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .ledger-item p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .delta {
+      font-weight: 900;
+      color: var(--lime);
+      white-space: nowrap;
+    }
+
+    nav {
+      position: fixed;
+      left: 50%;
+      bottom: 12px;
+      transform: translateX(-50%);
+      width: min(calc(100% - 24px), 416px);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      padding: 8px;
+      border-radius: 18px;
+      background: rgba(20, 20, 28, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(18px);
+      z-index: 6;
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.42);
+    }
+
+    .nav-btn {
+      min-width: 0;
+      height: 52px;
+      border-radius: 12px;
+      background: transparent;
+      color: var(--muted);
+      display: grid;
+      place-items: center;
+      gap: 3px;
+      font-size: 11px;
+    }
+
+    .nav-btn.active {
+      color: #17120b;
+      background: var(--gold);
+      font-weight: 900;
+    }
+
+    .nav-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 6px;
+      border: 2px solid currentColor;
+      position: relative;
+    }
+
+    .nav-icon.map::after {
+      content: "";
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: currentColor;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .nav-icon.roles::before,
+    .nav-icon.roles::after {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: currentColor;
+      top: 4px;
+    }
+
+    .nav-icon.roles::before { left: 4px; }
+    .nav-icon.roles::after { right: 4px; }
+
+    .nav-icon.wallet::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 2px;
+      background: currentColor;
+      left: 3px;
+      top: 8px;
+    }
+
+    dialog {
+      width: min(calc(100% - 28px), 398px);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 12px;
+      background: #191923;
+      color: var(--text);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+      padding: 0;
+    }
+
+    dialog::backdrop {
+      background: rgba(0, 0, 0, 0.62);
+      backdrop-filter: blur(4px);
+    }
+
+    .modal-body {
+      padding: 16px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .modal-body h2 {
+      margin: 0;
+      font-size: 19px;
+    }
+
+    .modal-body p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: 13px;
+    }
+
+    .field {
+      display: grid;
+      gap: 6px;
+    }
+
+    .field label {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .field input {
+      height: 44px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+      padding: 0 12px;
+      outline: none;
+    }
+
+    .modal-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      padding: 0 16px 16px;
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 86px;
+      transform: translateX(-50%) translateY(20px);
+      width: min(calc(100% - 32px), 392px);
+      min-height: 50px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: #f7f0d8;
+      color: #19130b;
+      font-weight: 800;
+      opacity: 0;
+      pointer-events: none;
+      transition: 180ms ease;
+      z-index: 7;
+      box-shadow: 0 18px 34px rgba(0, 0, 0, 0.34);
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .empty {
+      text-align: center;
+      color: var(--muted);
+      padding: 34px 18px;
+      border: 1px dashed rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+    }
+
+    @media (max-width: 360px) {
+      .character-grid { grid-template-columns: 1fr; }
+      .bar-card { grid-template-columns: 64px 1fr; }
+      .bar-art { width: 64px; }
+      .points-pill { min-width: 92px; }
+      .subtitle { max-width: 170px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="topline">
+        <div class="brand">
+          <div class="brand-mark">BQ</div>
+          <div>
+            <h1>BarQuest</h1>
+            <p class="subtitle" id="locationText">定位中，搜尋附近酒吧</p>
+          </div>
+        </div>
+        <div class="points-pill">
+          <strong id="pointsTop">0</strong>
+          <span>可用點數</span>
+        </div>
+      </div>
+      <div class="searchbar">
+        <input id="searchInput" placeholder="搜尋酒吧、風格、地區" autocomplete="off">
+        <button class="icon-btn" id="locateBtn" title="重新定位" aria-label="重新定位">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="2"/>
+            <circle cx="12" cy="12" r="2" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section id="viewExplore" class="view active">
+        <div class="status-row">
+          <div class="metric">
+            <span>本月打卡</span>
+            <strong id="checkinCount">0 次</strong>
+          </div>
+          <div class="metric">
+            <span>已收集角色</span>
+            <strong id="ownedCount">0 / 11</strong>
+          </div>
+        </div>
+        <div class="filters" id="filters"></div>
+        <div class="bar-list" id="barList"></div>
+      </section>
+
+      <section id="viewMap" class="view">
+        <div class="map-panel">
+          <div class="map-toolbar">
+            <h2>附近酒吧地圖</h2>
+            <button class="secondary-btn" id="sortNearestBtn" style="width:104px">距離排序</button>
+          </div>
+          <div class="map-canvas" id="mapCanvas">
+            <span class="road a"></span>
+            <span class="road b"></span>
+            <span class="road c"></span>
+          </div>
+          <div class="map-sheet" id="mapSheet"></div>
+        </div>
+      </section>
+
+      <section id="viewRoles" class="view">
+        <div class="draw-panel">
+          <h2>隱藏角色抽卡</h2>
+          <p>花 120 點抽一次。一般角色可以用點數兌換，隱藏角色只靠抽。</p>
+          <button class="primary-btn" id="drawBtn">抽隱藏角色</button>
+        </div>
+        <div class="character-grid" id="characterGrid"></div>
+      </section>
+
+      <section id="viewWallet" class="view">
+        <div class="status-row">
+          <div class="metric">
+            <span>累積獲得</span>
+            <strong id="earnedTotal">0 點</strong>
+          </div>
+          <div class="metric">
+            <span>累積花費</span>
+            <strong id="spentTotal">0 點</strong>
+          </div>
+        </div>
+        <div class="ledger" id="ledger"></div>
+      </section>
+    </main>
+
+    <nav aria-label="主選單">
+      <button class="nav-btn active" data-view="Explore"><span class="nav-icon"></span><span>搜尋</span></button>
+      <button class="nav-btn" data-view="Map"><span class="nav-icon map"></span><span>地圖</span></button>
+      <button class="nav-btn" data-view="Roles"><span class="nav-icon roles"></span><span>角色</span></button>
+      <button class="nav-btn" data-view="Wallet"><span class="nav-icon wallet"></span><span>點數</span></button>
+    </nav>
+  </div>
+
+  <dialog id="checkinDialog">
+    <div class="modal-body">
+      <h2 id="dialogTitle">消費打卡</h2>
+      <p id="dialogMeta">消費滿額可獲得點數，距離越近越容易拿到現場加成。</p>
+      <div class="field">
+        <label for="spendInput">本次消費金額</label>
+        <input id="spendInput" inputmode="numeric" type="number" min="0" step="10" placeholder="例如 980">
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="secondary-btn" id="cancelCheckinBtn">取消</button>
+      <button class="primary-btn" id="confirmCheckinBtn">打卡集點</button>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const bars = [
+      { id: "b1", name: "Midnight Signal", area: "信義", lat: 25.0337, lng: 121.5646, tags: ["精釀", "下班", "戶外座"], rate: 1.1, accent: "#4d65ff", desc: "適合工程師說只喝一杯，然後開始重構人生。" },
+      { id: "b2", name: "Null Pointer Bar", area: "大安", lat: 25.0256, lng: 121.5432, tags: ["威士忌", "安靜", "深夜"], rate: 1.25, accent: "#ef6f8f", desc: "點一杯，讓今晚的 exception 有地方被接住。" },
+      { id: "b3", name: "404 Taproom", area: "中山", lat: 25.0526, lng: 121.5221, tags: ["啤酒", "熱鬧", "好友"], rate: 1, accent: "#f5c451", desc: "找不到需求文件，至少找得到第二杯。" },
+      { id: "b4", name: "Merge Conflict", area: "松山", lat: 25.0498, lng: 121.5772, tags: ["調酒", "約會", "音樂"], rate: 1.35, accent: "#55d6c2", desc: "氣氛很好，適合承認今天又把主分支弄壞。" },
+      { id: "b5", name: "Deploy Lounge", area: "東區", lat: 25.0422, lng: 121.5487, tags: ["調酒", "深夜", "沙發"], rate: 1.2, accent: "#a8df65", desc: "半夜 deploy 前的儀式感，出事後也能回來。" },
+      { id: "b6", name: "Stack Trace Cellar", area: "西門", lat: 25.0439, lng: 121.5071, tags: ["地下", "威士忌", "獨飲"], rate: 1.45, accent: "#ad7cff", desc: "一層一層往下查，最後發現問題是自己太累。" },
+      { id: "b7", name: "Hotfix Highball", area: "南港", lat: 25.0554, lng: 121.6132, tags: ["高球", "餐酒", "聚會"], rate: 1.05, accent: "#ff8f50", desc: "今晚的修補程式是碳酸、冰塊和一點點逃避。" },
+      { id: "b8", name: "Rubber Duck Pub", area: "公館", lat: 25.0149, lng: 121.5342, tags: ["學生", "啤酒", "輕鬆"], rate: 0.95, accent: "#50b8ff", desc: "你跟酒保講完 bug，突然就知道哪裡錯了。" }
+    ];
+
+    const characters = [
+      { id: "c1", name: "夜巡兔伯爵", cost: 90, c1: "#f5c451", c2: "#ef6f8f", bio: "每晚準時出沒，專門鼓勵你再點一杯。" },
+      { id: "c2", name: "微醺水母", cost: 120, c1: "#55d6c2", c2: "#4d65ff", bio: "漂在夜色裡，讓壓力先失焦。" },
+      { id: "c3", name: "霓虹狐狸", cost: 150, c1: "#ef6f8f", c2: "#ad7cff", bio: "只在巷弄酒吧亮相，懂得避開週一。" },
+      { id: "c4", name: "高球企鵝", cost: 180, c1: "#50b8ff", c2: "#f5c451", bio: "冰塊管理大師，情緒也要加滿。" },
+      { id: "c5", name: "威士忌貓頭鷹", cost: 220, c1: "#b1774d", c2: "#f5c451", bio: "看穿每個說明天早起的人。" },
+      { id: "c6", name: "吧台小惡魔", cost: 260, c1: "#ef6f8f", c2: "#101018", bio: "總能把一杯變成三杯。" },
+      { id: "c7", name: "檸檬電音鳥", cost: 300, c1: "#a8df65", c2: "#55d6c2", bio: "酸度很高，節拍更高。" },
+      { id: "c8", name: "地下室熊", cost: 360, c1: "#ad7cff", c2: "#303040", bio: "安靜、巨大、適合陪你等朋友回訊息。" },
+      { id: "c9", name: "調酒機械犬", cost: 420, c1: "#c9d3df", c2: "#4d65ff", bio: "每次打卡都會重新校準快樂。" },
+      { id: "c10", name: "黎明龍蝦", cost: 520, c1: "#ff8f50", c2: "#f5c451", bio: "只有最後一班車走了才會現身。" },
+      { id: "secret", name: "隱藏角：醉月神", cost: 0, c1: "#f7f0d8", c2: "#ad7cff", bio: "不能兌換，只會在你最缺點數時出現。", hidden: true }
+    ];
+
+    const tagFilters = ["全部", "深夜", "威士忌", "精釀", "調酒", "安靜", "熱鬧"];
+    const fallbackLocation = { lat: 25.0339, lng: 121.5645, label: "台北 101 示範座標" };
+    const stateKey = "barquest-demo-state-v1";
+    let selectedTag = "全部";
+    let selectedBarId = bars[0].id;
+    let pendingBar = null;
+    let userLocation = fallbackLocation;
+
+    const defaultState = {
+      points: 260,
+      owned: ["c1"],
+      ledger: [
+        { title: "新手夜遊禮", detail: "建立帳號獎勵", delta: 260, time: new Date().toLocaleString("zh-TW") }
+      ],
+      checkins: []
+    };
+
+    const state = loadState();
+
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(stateKey);
+        return raw ? JSON.parse(raw) : structuredClone(defaultState);
+      } catch {
+        return structuredClone(defaultState);
+      }
+    }
+
+    function saveState() {
+      localStorage.setItem(stateKey, JSON.stringify(state));
+    }
+
+    function haversine(a, b) {
+      const R = 6371;
+      const dLat = toRad(b.lat - a.lat);
+      const dLng = toRad(b.lng - a.lng);
+      const lat1 = toRad(a.lat);
+      const lat2 = toRad(b.lat);
+      const h = Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLng / 2) ** 2;
+      return 2 * R * Math.asin(Math.sqrt(h));
+    }
+
+    function toRad(value) {
+      return value * Math.PI / 180;
+    }
+
+    function distanceLabel(km) {
+      return km < 1 ? `${Math.round(km * 1000)} m` : `${km.toFixed(1)} km`;
+    }
+
+    function barsWithDistance() {
+      return bars.map(bar => ({ ...bar, distance: haversine(userLocation, bar) }))
+        .sort((a, b) => a.distance - b.distance);
+    }
+
+    function filteredBars() {
+      const query = document.querySelector("#searchInput").value.trim().toLowerCase();
+      return barsWithDistance().filter(bar => {
+        const matchTag = selectedTag === "全部" || bar.tags.includes(selectedTag);
+        const haystack = `${bar.name} ${bar.area} ${bar.tags.join(" ")} ${bar.desc}`.toLowerCase();
+        return matchTag && (!query || haystack.includes(query));
+      });
+    }
+
+    function render() {
+      document.querySelector("#pointsTop").textContent = state.points;
+      document.querySelector("#checkinCount").textContent = `${state.checkins.length} 次`;
+      document.querySelector("#ownedCount").textContent = `${state.owned.length} / ${characters.length}`;
+      renderFilters();
+      renderBars();
+      renderMap();
+      renderCharacters();
+      renderLedger();
+    }
+
+    function renderFilters() {
+      const wrap = document.querySelector("#filters");
+      wrap.innerHTML = tagFilters.map(tag => (
+        `<button class="chip ${tag === selectedTag ? "active" : ""}" data-tag="${tag}">${tag}</button>`
+      )).join("");
+      wrap.querySelectorAll("button").forEach(button => {
+        button.addEventListener("click", () => {
+          selectedTag = button.dataset.tag;
+          render();
+        });
+      });
+    }
+
+    function renderBars() {
+      const list = document.querySelector("#barList");
+      const items = filteredBars();
+      if (!items.length) {
+        list.innerHTML = `<div class="empty">沒有找到符合條件的酒吧</div>`;
+        return;
+      }
+      list.innerHTML = items.map(bar => `
+        <article class="bar-card">
+          <div class="bar-art" style="--accent:${bar.accent}"></div>
+          <div class="bar-main">
+            <div class="bar-head">
+              <h2 class="bar-title">${bar.name}</h2>
+              <span class="distance">${distanceLabel(bar.distance)}</span>
+            </div>
+            <div class="bar-meta">
+              <span class="tag">${bar.area}</span>
+              ${bar.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
+            </div>
+            <p class="bar-desc">${bar.desc}</p>
+            <div class="actions">
+              <button class="secondary-btn" data-map="${bar.id}">看地圖</button>
+              <button class="primary-btn" data-checkin="${bar.id}">消費打卡</button>
+            </div>
+          </div>
+        </article>
+      `).join("");
+      list.querySelectorAll("[data-checkin]").forEach(button => {
+        button.addEventListener("click", () => openCheckin(button.dataset.checkin));
+      });
+      list.querySelectorAll("[data-map]").forEach(button => {
+        button.addEventListener("click", () => {
+          selectedBarId = button.dataset.map;
+          switchView("Map");
+        });
+      });
+    }
+
+    function renderMap() {
+      const canvas = document.querySelector("#mapCanvas");
+      canvas.querySelectorAll(".map-dot").forEach(dot => dot.remove());
+      const points = barsWithDistance();
+      const latValues = [...points.map(b => b.lat), userLocation.lat];
+      const lngValues = [...points.map(b => b.lng), userLocation.lng];
+      const minLat = Math.min(...latValues) - 0.004;
+      const maxLat = Math.max(...latValues) + 0.004;
+      const minLng = Math.min(...lngValues) - 0.004;
+      const maxLng = Math.max(...lngValues) + 0.004;
+
+      const project = point => ({
+        x: 8 + ((point.lng - minLng) / (maxLng - minLng)) * 84,
+        y: 92 - ((point.lat - minLat) / (maxLat - minLat)) * 84
+      });
+
+      const user = project(userLocation);
+      const userDot = document.createElement("button");
+      userDot.className = "map-dot user";
+      userDot.style.left = `${user.x}%`;
+      userDot.style.top = `${user.y}%`;
+      userDot.textContent = "你";
+      canvas.appendChild(userDot);
+
+      points.forEach((bar, index) => {
+        const p = project(bar);
+        const dot = document.createElement("button");
+        dot.className = `map-dot bar ${bar.id === selectedBarId ? "selected" : ""}`;
+        dot.style.left = `${p.x}%`;
+        dot.style.top = `${p.y}%`;
+        dot.textContent = index + 1;
+        dot.title = bar.name;
+        dot.addEventListener("click", () => {
+          selectedBarId = bar.id;
+          renderMap();
+        });
+        canvas.appendChild(dot);
+      });
+
+      const selected = points.find(bar => bar.id === selectedBarId) || points[0];
+      document.querySelector("#mapSheet").innerHTML = `
+        <div>
+          <strong>${selected.name}</strong>
+          <div style="color:var(--muted);font-size:12px;margin-top:4px">${selected.area} · ${distanceLabel(selected.distance)} · ${selected.tags.join(" / ")}</div>
+        </div>
+        <button class="primary-btn" id="mapCheckinBtn">在這裡消費打卡</button>
+      `;
+      document.querySelector("#mapCheckinBtn").addEventListener("click", () => openCheckin(selected.id));
+    }
+
+    function renderCharacters() {
+      const grid = document.querySelector("#characterGrid");
+      grid.innerHTML = characters.map(character => {
+        const owned = state.owned.includes(character.id);
+        const locked = character.hidden && !owned;
+        const canBuy = !owned && !character.hidden && state.points >= character.cost;
+        return `
+          <article class="character-card ${owned ? "" : "locked"}">
+            <div class="avatar" style="--c1:${locked ? "#34343e" : character.c1};--c2:${locked ? "#15151b" : character.c2}"></div>
+            <div>
+              <h3>${locked ? "隱藏角色：未揭曉" : character.name}</h3>
+              <p>${locked ? "只能靠抽卡取得，點數夠也不能直接買。" : character.bio}</p>
+            </div>
+            <div class="cost-row">
+              <span class="tag">${owned ? "已擁有" : character.hidden ? "抽卡限定" : `${character.cost} 點`}</span>
+              ${character.hidden ? "" : `<button class="small-btn" data-buy="${character.id}" ${canBuy ? "" : "disabled"}>${owned ? "收藏" : "兌換"}</button>`}
+            </div>
+          </article>
+        `;
+      }).join("");
+      grid.querySelectorAll("[data-buy]").forEach(button => {
+        button.addEventListener("click", () => buyCharacter(button.dataset.buy));
+      });
+      document.querySelector("#drawBtn").disabled = state.points < 120 || state.owned.includes("secret");
+    }
+
+    function renderLedger() {
+      const earned = state.ledger.filter(item => item.delta > 0).reduce((sum, item) => sum + item.delta, 0);
+      const spent = Math.abs(state.ledger.filter(item => item.delta < 0).reduce((sum, item) => sum + item.delta, 0));
+      document.querySelector("#earnedTotal").textContent = `${earned} 點`;
+      document.querySelector("#spentTotal").textContent = `${spent} 點`;
+      const ledger = document.querySelector("#ledger");
+      if (!state.ledger.length) {
+        ledger.innerHTML = `<div class="empty">還沒有點數紀錄</div>`;
+        return;
+      }
+      ledger.innerHTML = [...state.ledger].reverse().map(item => `
+        <div class="ledger-item">
+          <div>
+            <h3>${item.title}</h3>
+            <p>${item.detail} · ${item.time}</p>
+          </div>
+          <div class="delta" style="color:${item.delta >= 0 ? "var(--lime)" : "var(--rose)"}">${item.delta >= 0 ? "+" : ""}${item.delta}</div>
+        </div>
+      `).join("");
+    }
+
+    function openCheckin(barId) {
+      pendingBar = barsWithDistance().find(bar => bar.id === barId);
+      document.querySelector("#dialogTitle").textContent = `在 ${pendingBar.name} 打卡`;
+      document.querySelector("#dialogMeta").textContent = `${pendingBar.area} · 距離 ${distanceLabel(pendingBar.distance)} · 每 10 元約 ${pendingBar.rate.toFixed(2)} 點`;
+      document.querySelector("#spendInput").value = "";
+      document.querySelector("#checkinDialog").showModal();
+      setTimeout(() => document.querySelector("#spendInput").focus(), 50);
+    }
+
+    function confirmCheckin() {
+      const spend = Number(document.querySelector("#spendInput").value);
+      if (!pendingBar || !spend || spend <= 0) {
+        toast("請輸入本次消費金額");
+        return;
+      }
+      const nearBonus = pendingBar.distance <= 0.35 ? 30 : 0;
+      const points = Math.max(1, Math.round((spend / 10) * pendingBar.rate + nearBonus));
+      state.points += points;
+      const event = {
+        title: `${pendingBar.name} 消費打卡`,
+        detail: `消費 NT$${Math.round(spend).toLocaleString("zh-TW")}${nearBonus ? "，含現場加成" : ""}`,
+        delta: points,
+        time: new Date().toLocaleString("zh-TW")
+      };
+      state.ledger.push(event);
+      state.checkins.push({ barId: pendingBar.id, spend, points, time: Date.now() });
+      saveState();
+      document.querySelector("#checkinDialog").close();
+      toast(`打卡成功，獲得 ${points} 點`);
+      render();
+    }
+
+    function buyCharacter(characterId) {
+      const character = characters.find(item => item.id === characterId);
+      if (!character || state.owned.includes(character.id)) return;
+      if (state.points < character.cost) {
+        toast("點數還不夠");
+        return;
+      }
+      state.points -= character.cost;
+      state.owned.push(character.id);
+      state.ledger.push({
+        title: `兌換 ${character.name}`,
+        detail: "角色收藏",
+        delta: -character.cost,
+        time: new Date().toLocaleString("zh-TW")
+      });
+      saveState();
+      toast(`已解鎖 ${character.name}`);
+      render();
+    }
+
+    function drawSecret() {
+      if (state.owned.includes("secret")) {
+        toast("隱藏角色已經在收藏裡");
+        return;
+      }
+      if (state.points < 120) {
+        toast("抽卡需要 120 點");
+        return;
+      }
+      state.points -= 120;
+      const hit = Math.random() < 0.18;
+      state.ledger.push({
+        title: hit ? "抽中隱藏角色" : "隱藏角色抽卡",
+        detail: hit ? "醉月神加入收藏" : "這次只有一張微醺貼紙",
+        delta: -120,
+        time: new Date().toLocaleString("zh-TW")
+      });
+      if (hit) {
+        state.owned.push("secret");
+        toast("抽中了隱藏角：醉月神");
+      } else {
+        toast("沒中，酒吧人生就是這樣");
+      }
+      saveState();
+      render();
+    }
+
+    function switchView(name) {
+      document.querySelectorAll(".view").forEach(view => view.classList.remove("active"));
+      document.querySelector(`#view${name}`).classList.add("active");
+      document.querySelectorAll(".nav-btn").forEach(btn => btn.classList.toggle("active", btn.dataset.view === name));
+      if (name === "Map") renderMap();
+    }
+
+    function locateUser() {
+      const text = document.querySelector("#locationText");
+      text.textContent = "定位中，準備計算距離";
+      if (!navigator.geolocation) {
+        text.textContent = fallbackLocation.label;
+        render();
+        return;
+      }
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          userLocation = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+            label: "已使用目前位置"
+          };
+          text.textContent = `已定位 · 精準度 ${Math.round(position.coords.accuracy)} m`;
+          render();
+        },
+        () => {
+          userLocation = fallbackLocation;
+          text.textContent = fallbackLocation.label;
+          toast("未取得定位，改用台北示範座標");
+          render();
+        },
+        { enableHighAccuracy: true, timeout: 9000, maximumAge: 60000 }
+      );
+    }
+
+    function toast(message) {
+      const el = document.querySelector("#toast");
+      el.textContent = message;
+      el.classList.add("show");
+      clearTimeout(toast.timer);
+      toast.timer = setTimeout(() => el.classList.remove("show"), 2200);
+    }
+
+    document.querySelectorAll(".nav-btn").forEach(button => {
+      button.addEventListener("click", () => switchView(button.dataset.view));
+    });
+    document.querySelector("#searchInput").addEventListener("input", renderBars);
+    document.querySelector("#locateBtn").addEventListener("click", locateUser);
+    document.querySelector("#sortNearestBtn").addEventListener("click", () => {
+      selectedBarId = barsWithDistance()[0].id;
+      renderMap();
+      toast("已選取最近的酒吧");
+    });
+    document.querySelector("#cancelCheckinBtn").addEventListener("click", () => document.querySelector("#checkinDialog").close());
+    document.querySelector("#confirmCheckinBtn").addEventListener("click", confirmCheckin);
+    document.querySelector("#drawBtn").addEventListener("click", drawSecret);
+
+    locateUser();
+    render();
+  </script>
+</body>
+</html>
