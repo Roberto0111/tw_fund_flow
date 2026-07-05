@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daddy's Coffee｜Guoan Brew Supply</title>
+  <meta name="description" content="Daddy's Coffee，台中西屯國安一路的專業手沖咖啡、特色咖啡、咖啡豆販售與咖啡教學。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="Daddy's Coffee">
+      <span class="brand-mark">DC</span>
+      <span class="brand-text">Daddy's Coffee</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#drop">購物</a>
+      <a href="#brew">手沖</a>
+      <a href="#reviews">留言</a>
+      <a href="#visit">到店</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img class="hero-image" src="assets/hero-coffee.png" alt="手沖咖啡器具與咖啡豆擺放在深色吧台上">
+      <div class="hero-overlay"></div>
+      <div class="ticker" aria-label="Store notice">
+        <span>GUOAN 1ST ROAD</span>
+        <span>SPECIALTY COFFEE</span>
+        <span>HAND BREW</span>
+        <span>BEANS / CLASS / TAKEAWAY</span>
+      </div>
+      <div class="hero-content">
+        <p class="drop-label">TAICHUNG COFFEE UNIT · 407</p>
+        <h1>Daddy's<br>Coffee</h1>
+        <p class="hero-copy">國安一路 81 號。手沖、豆款、教學與日常補給，做給認真喝咖啡的人。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#drop">查看商品</a>
+          <a class="button ghost" href="https://www.google.com/maps/search/?api=1&query=Daddy%27s%20Coffee%20%E5%8F%B0%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%B1%AF%E5%8D%80%E5%9C%8B%E5%AE%89%E4%B8%80%E8%B7%AF81%E8%99%9F" target="_blank" rel="noreferrer">地圖導航</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <span>ROAST / POUR / CALIBRATE</span>
+        <strong>Clean cup, precise pour, street-ready caffeine.</strong>
+        <p>專業不是把話講複雜，是每一口都喝得出乾淨、甜感與尾韻。</p>
+      </aside>
+    </section>
+
+    <section class="stats" aria-label="Daddy's Coffee highlights">
+      <div><span>01</span><strong>專業手沖</strong><p>依豆款調整注水節奏。</p></div>
+      <div><span>02</span><strong>咖啡豆販售</strong><p>把店裡風味帶回家。</p></div>
+      <div><span>03</span><strong>咖啡教學</strong><p>從粉徑到萃取一次校正。</p></div>
+      <div><span>04</span><strong>特色飲品</strong><p>保留咖啡基底的創意風味。</p></div>
+    </section>
+
+    <section class="section-head" id="drop">
+      <p class="drop-label">ONLINE DROP</p>
+      <h2>咖啡補給區</h2>
+      <p>概念購物區，可接線上訂購、豆單、課程預約或到店取貨。</p>
+    </section>
+
+    <section class="shop-grid">
+      <article class="product-card featured">
+        <div class="product-meta">
+          <span>LIMITED BEANS</span>
+          <b>店選手沖豆 200g</b>
+        </div>
+        <h3>Daddy's Select</h3>
+        <p>適合喜歡乾淨酸甜、尾韻清楚的人。可依現場豆單調整。</p>
+        <div class="product-foot">
+          <strong>NT$ 480+</strong>
+          <button type="button" data-cart="Daddy's Select">加入清單</button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-meta"><span>BREW BAR</span><b>單杯手沖</b></div>
+        <h3>Daily Hand Brew</h3>
+        <p>一杯專注處理風味層次的日常手沖。</p>
+        <div class="product-foot">
+          <strong>NT$ 160+</strong>
+          <button type="button" data-cart="Daily Hand Brew">加入清單</button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-meta"><span>SIGNATURE</span><b>特色拿鐵</b></div>
+        <h3>Gold Latte</h3>
+        <p>特色風味咖啡，甜感明確但不蓋掉咖啡。</p>
+        <div class="product-foot">
+          <strong>NT$ 150+</strong>
+          <button type="button" data-cart="Gold Latte">加入清單</button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-meta"><span>CLASS</span><b>手沖教學</b></div>
+        <h3>Brew Session</h3>
+        <p>粉徑、水溫、注水、萃取判斷，建立自己的沖煮參數。</p>
+        <div class="product-foot">
+          <strong>預約制</strong>
+          <button type="button" data-cart="Brew Session">加入清單</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="cart-panel" aria-live="polite">
+      <div>
+        <p class="drop-label">ORDER LIST</p>
+        <h2>詢問清單</h2>
+      </div>
+      <ul data-cart-list>
+        <li>尚未選擇商品</li>
+      </ul>
+      <a class="button primary" href="tel:+886424633612">電話詢問</a>
+    </section>
+
+    <section class="brew-section" id="brew">
+      <div class="brew-copy">
+        <p class="drop-label">BREW STANDARD</p>
+        <h2>潮牌外殼，咖啡核心。</h2>
+        <p>視覺可以硬，咖啡不能亂。Daddy's Coffee 的重點放在豆款、研磨、注水與杯中乾淨度，讓手沖不是儀式表演，而是穩定產出好喝。</p>
+      </div>
+      <div class="brew-steps">
+        <article><span>SELECT</span><strong>選豆</strong><p>產區、處理法、烘焙度先定調。</p></article>
+        <article><span>GRIND</span><strong>研磨</strong><p>粉徑影響流速，也影響杯感。</p></article>
+        <article><span>POUR</span><strong>注水</strong><p>用節奏控制萃取，不靠運氣。</p></article>
+      </div>
+    </section>
+
+    <section class="lookbook">
+      <div>
+        <span>NO OVERDESIGN</span>
+        <strong>BLACK / OLIVE / CANVAS / COFFEE</strong>
+      </div>
+      <p>街頭感是外觀，專業感是底層。頁面用硬派格線、軍綠與卡其色，但資訊仍清楚可讀。</p>
+    </section>
+
+    <section class="reviews" id="reviews">
+      <div class="section-head compact">
+        <p class="drop-label">COMMUNITY</p>
+        <h2>留言區</h2>
+        <p>先做前端展示版，可接 Google Sheet、Firebase 或後台資料庫。</p>
+      </div>
+      <div class="review-layout">
+        <form class="comment-form" data-comment-form>
+          <label>
+            名稱
+            <input name="name" type="text" placeholder="你的名字" required>
+          </label>
+          <label>
+            留言
+            <textarea name="message" rows="5" placeholder="喝完的感覺、豆款心得、課程問題..." required></textarea>
+          </label>
+          <button class="button primary" type="submit">送出留言</button>
+        </form>
+        <div class="comment-list" data-comments>
+          <article><strong>R.</strong><p>手沖很乾淨，尾韻不混，適合慢慢喝。</p></article>
+          <article><strong>Bean Hunter</strong><p>想買豆回家練，這種清楚風味介紹很需要。</p></article>
+          <article><strong>Guoan Neighbor</strong><p>國安一路附近終於有一個看起來很認真的咖啡點。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="visit" id="visit">
+      <div>
+        <p class="drop-label">STORE INFO</p>
+        <h2>台中市西屯區國安一路 81 號</h2>
+      </div>
+      <dl>
+        <div><dt>電話</dt><dd><a href="tel:+886424633612">04 2463 3612</a></dd></div>
+        <div><dt>營業</dt><dd>週一 12:00–19:00；週二至週六約 09:00–18:00；週日休息</dd></div>
+        <div><dt>服務</dt><dd>手沖咖啡、特色咖啡、咖啡豆販售、咖啡教學、場地租借</dd></div>
+      </dl>
+      <p class="note">實際營業時間與豆單請以店家社群公告為準。</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Daddy's Coffee concept site · street coffee supply</p>
+    <a href="#top">BACK TO TOP</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
