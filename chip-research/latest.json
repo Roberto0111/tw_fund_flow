@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T09:19:03",
+  "generated_at": "2026-08-31T09:21:48",
   "target_date": "2026-08-28",
   "trading_date": "2026-08-28",
   "trading_days": [
@@ -470,10 +470,10 @@
       "forum_confidence": 0.0,
       "forum_items": [],
       "forum_source_url": "https://www.ptt.cc/bbs/Stock/index.html",
-      "sentiment_score": -100.0,
+      "sentiment_score": -29.7,
       "sentiment_confidence": 29.7,
       "discussion_heat": 44.7,
-      "sentiment_label": "情緒低迷",
+      "sentiment_label": "偏空",
       "chip_sentiment_relation": "情籌雙弱",
       "fundamental_sentiment_relation": "基本面佳、情緒悲觀"
     },
@@ -549,12 +549,12 @@
       "forum_confidence": 0.0,
       "forum_items": [],
       "forum_source_url": "https://www.ptt.cc/bbs/Stock/index.html",
-      "sentiment_score": 100.0,
+      "sentiment_score": 19.8,
       "sentiment_confidence": 19.8,
       "discussion_heat": 37.8,
-      "sentiment_label": "情緒高漲",
-      "chip_sentiment_relation": "熱門但法人撤退",
-      "fundamental_sentiment_relation": "基本面與情緒共振"
+      "sentiment_label": "偏多",
+      "chip_sentiment_relation": "情籌混合",
+      "fundamental_sentiment_relation": "基本面與情緒分歧"
     },
     {
       "code": "6125",
@@ -771,10 +771,10 @@
       "forum_confidence": 0.0,
       "forum_items": [],
       "forum_source_url": "https://www.ptt.cc/bbs/Stock/index.html",
-      "sentiment_score": 100.0,
+      "sentiment_score": 29.7,
       "sentiment_confidence": 29.7,
       "discussion_heat": 44.7,
-      "sentiment_label": "情緒高漲",
+      "sentiment_label": "偏多",
       "chip_sentiment_relation": "熱門但法人撤退",
       "fundamental_sentiment_relation": "基本面與情緒共振"
     },
@@ -857,10 +857,10 @@
       "forum_confidence": 0.0,
       "forum_items": [],
       "forum_source_url": "https://www.ptt.cc/bbs/Stock/index.html",
-      "sentiment_score": 100.0,
+      "sentiment_score": 29.7,
       "sentiment_confidence": 29.7,
       "discussion_heat": 44.7,
-      "sentiment_label": "情緒高漲",
+      "sentiment_label": "偏多",
       "chip_sentiment_relation": "熱門但法人撤退",
       "fundamental_sentiment_relation": "基本面與情緒共振"
     },
@@ -943,10 +943,10 @@
       "forum_confidence": 0.0,
       "forum_items": [],
       "forum_source_url": "https://www.ptt.cc/bbs/Stock/index.html",
-      "sentiment_score": 100.0,
+      "sentiment_score": 29.7,
       "sentiment_confidence": 29.7,
       "discussion_heat": 44.7,
-      "sentiment_label": "情緒高漲",
+      "sentiment_label": "偏多",
       "chip_sentiment_relation": "熱門但法人撤退",
       "fundamental_sentiment_relation": "基本面與情緒共振"
     },
@@ -1015,7 +1015,7 @@
       "forum_confidence": 0.0,
       "forum_items": [],
       "forum_source_url": "https://www.ptt.cc/bbs/Stock/index.html",
-      "sentiment_score": 100.0,
+      "sentiment_score": 9.9,
       "sentiment_confidence": 9.9,
       "discussion_heat": 26.9,
       "sentiment_label": "樣本不足",
@@ -1165,10 +1165,10 @@
       "forum_confidence": 0.0,
       "forum_items": [],
       "forum_source_url": "https://www.ptt.cc/bbs/Stock/index.html",
-      "sentiment_score": 100.0,
+      "sentiment_score": 29.7,
       "sentiment_confidence": 29.7,
       "discussion_heat": 44.7,
-      "sentiment_label": "情緒高漲",
+      "sentiment_label": "偏多",
       "chip_sentiment_relation": "熱門但法人撤退",
       "fundamental_sentiment_relation": "基本面與情緒分歧"
     },
@@ -2698,7 +2698,7 @@
         }
       ],
       "forum_source_url": "https://www.ptt.cc/bbs/Stock/index.html",
-      "sentiment_score": 61.0,
+      "sentiment_score": 37.8,
       "sentiment_confidence": 62.0,
       "discussion_heat": 74.8,
       "sentiment_label": "情緒高漲",
@@ -2848,10 +2848,10 @@
       "forum_confidence": 0.0,
       "forum_items": [],
       "forum_source_url": "https://www.ptt.cc/bbs/Stock/index.html",
-      "sentiment_score": 100.0,
+      "sentiment_score": 29.7,
       "sentiment_confidence": 29.7,
       "discussion_heat": 44.7,
-      "sentiment_label": "情緒高漲",
+      "sentiment_label": "偏多",
       "chip_sentiment_relation": "熱門但法人撤退",
       "fundamental_sentiment_relation": "基本面與情緒共振"
     },
@@ -3256,10 +3256,10 @@
       "forum_confidence": 0.0,
       "forum_items": [],
       "forum_source_url": "https://www.ptt.cc/bbs/Stock/index.html",
-      "sentiment_score": 100.0,
+      "sentiment_score": 29.7,
       "sentiment_confidence": 29.7,
       "discussion_heat": 44.7,
-      "sentiment_label": "情緒高漲",
+      "sentiment_label": "偏多",
       "chip_sentiment_relation": "熱門但法人撤退",
       "fundamental_sentiment_relation": "基本面與情緒分歧"
     },
@@ -3351,10 +3351,10 @@
         }
       ],
       "forum_source_url": "https://www.ptt.cc/bbs/Stock/index.html",
-      "sentiment_score": 45.5,
+      "sentiment_score": 28.8,
       "sentiment_confidence": 63.5,
       "discussion_heat": 72.6,
-      "sentiment_label": "情緒高漲",
+      "sentiment_label": "偏多",
       "chip_sentiment_relation": "熱門但法人撤退",
       "fundamental_sentiment_relation": "基本面與情緒共振"
     },
@@ -3469,18 +3469,18 @@
       "recommendation": "背離警戒，避免追高",
       "news": [
         {
-          "title": "6449 鈺邦- 現實上，固態電容股獲利能力及成長仍是比BBU 股強- 股市爆料同學會 - CMoney",
-          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1lTjQ4VkZDMlpncFoyekVYX1YzSHQyc19HMGZ5ck5yYU96eXZGS1pmMHpiQzU5YTM0Qy13QnVicW1wWE1Uek9hNDkycjdMejc2ZURpaGNoemg?oc=5",
-          "published": "Wed, 05 Aug 2026 07:00:00 GMT",
-          "source": "CMoney",
-          "score": 2
-        },
-        {
           "title": "鈺邦看好CAP取代MLCC機會增 到明年上半年擴產約7成 - news.cnyes.com",
           "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1IbllHRVdiVmM2Qmo3WFBiYUV6Y19QQU10WTMyUmZyWHdjeFB1ZWdXdC16RkRsNzhVcTVpUkZWaWxIbHlzVjQ0TzQ5cGprejA?oc=5",
           "published": "Wed, 26 Aug 2026 05:36:12 GMT",
           "source": "news.cnyes.com",
           "score": 1
+        },
+        {
+          "title": "6449 鈺邦- 現實上，固態電容股獲利能力及成長仍是比BBU 股強- 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1lTjQ4VkZDMlpncFoyekVYX1YzSHQyc19HMGZ5ck5yYU96eXZGS1pmMHpiQzU5YTM0Qy13QnVicW1wWE1Uek9hNDkycjdMejc2ZURpaGNoemg?oc=5",
+          "published": "Wed, 05 Aug 2026 07:00:00 GMT",
+          "source": "CMoney",
+          "score": 2
         },
         {
           "title": "被動元件復活！「指標廠」挾信昌電、鈺邦亮燈漲停 金山電、蜜望實強漲8% - Yahoo股市",
@@ -3501,10 +3501,10 @@
       "forum_confidence": 0.0,
       "forum_items": [],
       "forum_source_url": "https://www.ptt.cc/bbs/Stock/index.html",
-      "sentiment_score": 100.0,
+      "sentiment_score": 29.7,
       "sentiment_confidence": 29.7,
       "discussion_heat": 44.7,
-      "sentiment_label": "情緒高漲",
+      "sentiment_label": "偏多",
       "chip_sentiment_relation": "熱門但法人撤退",
       "fundamental_sentiment_relation": "基本面與情緒共振"
     },
@@ -3651,10 +3651,10 @@
       "forum_confidence": 0.0,
       "forum_items": [],
       "forum_source_url": "https://www.ptt.cc/bbs/Stock/index.html",
-      "sentiment_score": 100.0,
+      "sentiment_score": 29.7,
       "sentiment_confidence": 29.7,
       "discussion_heat": 44.7,
-      "sentiment_label": "情緒高漲",
+      "sentiment_label": "偏多",
       "chip_sentiment_relation": "熱門但法人撤退",
       "fundamental_sentiment_relation": "基本面與情緒共振"
     },
@@ -5738,10 +5738,10 @@
         }
       ],
       "forum_source_url": "https://www.ptt.cc/bbs/Stock/index.html",
-      "sentiment_score": -58.7,
+      "sentiment_score": -34.2,
       "sentiment_confidence": 58.2,
       "discussion_heat": 74.4,
-      "sentiment_label": "情緒低迷",
+      "sentiment_label": "偏空",
       "chip_sentiment_relation": "法人布局、市場悲觀",
       "fundamental_sentiment_relation": "基本面佳、情緒悲觀"
     },
@@ -6295,12 +6295,12 @@
       "forum_confidence": 0.0,
       "forum_items": [],
       "forum_source_url": "https://www.ptt.cc/bbs/Stock/index.html",
-      "sentiment_score": -100.0,
+      "sentiment_score": -19.8,
       "sentiment_confidence": 19.8,
       "discussion_heat": 37.8,
-      "sentiment_label": "情緒低迷",
-      "chip_sentiment_relation": "法人布局、市場悲觀",
-      "fundamental_sentiment_relation": "基本面佳、情緒悲觀"
+      "sentiment_label": "偏空",
+      "chip_sentiment_relation": "情籌混合",
+      "fundamental_sentiment_relation": "基本面與情緒分歧"
     },
     {
       "code": "5314",
@@ -6381,10 +6381,10 @@
       "forum_confidence": 0.0,
       "forum_items": [],
       "forum_source_url": "https://www.ptt.cc/bbs/Stock/index.html",
-      "sentiment_score": -100.0,
+      "sentiment_score": -29.7,
       "sentiment_confidence": 29.7,
       "discussion_heat": 44.7,
-      "sentiment_label": "情緒低迷",
+      "sentiment_label": "偏空",
       "chip_sentiment_relation": "法人布局、市場悲觀",
       "fundamental_sentiment_relation": "基本面佳、情緒悲觀"
     },
@@ -6467,10 +6467,10 @@
       "forum_confidence": 0.0,
       "forum_items": [],
       "forum_source_url": "https://www.ptt.cc/bbs/Stock/index.html",
-      "sentiment_score": 100.0,
+      "sentiment_score": 29.7,
       "sentiment_confidence": 29.7,
       "discussion_heat": 44.7,
-      "sentiment_label": "情緒高漲",
+      "sentiment_label": "偏多",
       "chip_sentiment_relation": "情籌共振",
       "fundamental_sentiment_relation": "基本面與情緒共振"
     },
@@ -6667,7 +6667,7 @@
       "forum_confidence": 0.0,
       "forum_items": [],
       "forum_source_url": "https://www.ptt.cc/bbs/Stock/index.html",
-      "sentiment_score": 100.0,
+      "sentiment_score": 9.9,
       "sentiment_confidence": 9.9,
       "discussion_heat": 26.9,
       "sentiment_label": "樣本不足",
@@ -6820,7 +6820,7 @@
         }
       ],
       "forum_source_url": "https://www.ptt.cc/bbs/Stock/index.html",
-      "sentiment_score": 60.5,
+      "sentiment_score": 51.4,
       "sentiment_confidence": 84.9,
       "discussion_heat": 93.8,
       "sentiment_label": "情緒高漲",
@@ -7426,10 +7426,10 @@
       "forum_confidence": 0.0,
       "forum_items": [],
       "forum_source_url": "https://www.ptt.cc/bbs/Stock/index.html",
-      "sentiment_score": 100.0,
+      "sentiment_score": 29.7,
       "sentiment_confidence": 29.7,
       "discussion_heat": 44.7,
-      "sentiment_label": "情緒高漲",
+      "sentiment_label": "偏多",
       "chip_sentiment_relation": "情籌共振",
       "fundamental_sentiment_relation": "基本面與情緒共振"
     },
@@ -7494,10 +7494,10 @@
           "score": 0
         },
         {
-          "title": "兆豐金上半年EPS 1.44元　非銀行子公司獲利貢獻倍增至28％ - ETtoday財經雲",
-          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBXclZkWTVsSkp3SG04Y09EdTlWUlNhUDI1R0JyNlp1aXl4N2lJbnFTeHY0MUtEMEN3TG1YdjBHM0xWejBJR01rbkgtY2V3bUdpSFHSAVBBVV95cUxOUkM1Y3FZRmppcjFwbWZYTjBQR2ZZeFBhY0JZa2pTM0Y5RnFfeDFNeUlHOE53ZWhWQXU3VEJNWlA5MEtSSzVzbG9aN3d0VnN6SA?oc=5",
-          "published": "Thu, 27 Aug 2026 07:32:00 GMT",
-          "source": "ETtoday財經雲",
+          "title": "兆豐金、元大金、第一金…金控股存股天菜怎麼挑？這檔外資12天買超19萬張！最新目標價、現金殖利率必看 - 今周刊",
+          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQRmRJTkFFYXV1dFZGS0h1VHFmYVUtQi1uX3EtMENoMC1KbmhBaTVHWi1WMmw2ckNYUkZaaU9ENHRYTlhGWHhjU2hLeE5zWUEwWlVzQVVaZ1d2SmtoZ09ndUJ2SEc2RzNzOEhacnI1djhIYzdDZTVKbEhpQ21JNGdkOQ?oc=5",
+          "published": "Fri, 28 Aug 2026 10:10:00 GMT",
+          "source": "今周刊",
           "score": 1
         }
       ],
@@ -7521,10 +7521,10 @@
         }
       ],
       "forum_source_url": "https://www.ptt.cc/bbs/Stock/index.html",
-      "sentiment_score": 60.0,
+      "sentiment_score": 34.0,
       "sentiment_confidence": 56.7,
       "discussion_heat": 65.4,
-      "sentiment_label": "情緒高漲",
+      "sentiment_label": "偏多",
       "chip_sentiment_relation": "情籌共振",
       "fundamental_sentiment_relation": "基本面與情緒共振"
     },
