@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>每日籌碼研究 2026-10-19</title>
+<style>
+:root{--ink:#1f2933;--muted:#697681;--line:#d8dee5;--paper:#fff;--wash:#f5f7f9;--blue:#286f9b;--gold:#b98527;--orange:#c6542d;--olive:#647647}
+*{box-sizing:border-box}body{margin:0;background:var(--wash);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;letter-spacing:0}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}header{background:#101820;color:#fff;padding:34px max(24px,calc((100vw - 1240px)/2)) 28px}header h1{font-size:30px;margin:6px 0 8px}header p{margin:0;color:#b9c4cc}.eyebrow{font:700 12px ui-monospace,SFMono-Regular,monospace;color:var(--gold)}main{max-width:1240px;margin:auto}.database-link{display:flex;justify-content:flex-end;padding:14px 20px;background:var(--paper);border-bottom:1px solid var(--line)}.database-link a{display:inline-flex;padding:9px 12px;background:var(--ink);color:#fff;font-size:13px;font-weight:800;text-decoration:none}.kpis{display:grid;grid-template-columns:repeat(5,1fr);border-bottom:1px solid var(--line);background:var(--paper)}.kpi{padding:20px;border-right:1px solid var(--line)}.kpi:last-child{border-right:0}.kpi span{display:block;color:var(--muted);font-size:12px}.kpi b{display:block;font-size:22px;margin-top:6px}.visuals{display:grid;grid-template-columns:2fr 1fr;gap:18px;padding:24px;background:var(--paper)}figure{margin:0;border-top:3px solid var(--ink);padding-top:12px}figure img{display:block;width:100%;height:auto}figcaption{font-size:12px;color:var(--muted);margin-top:8px}.pipeline{padding:0 24px 24px;background:var(--paper)}.band{padding:28px 24px;border-top:1px solid var(--line);background:var(--paper)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:16px}.section-head h2{margin:3px 0 0;font-size:22px}.section-head p{margin:0;max-width:560px;color:var(--muted);font-size:14px}.method-note{margin:0;color:var(--muted);font-size:13px;line-height:1.7}.table-wrap{overflow:auto;border-top:1px solid var(--ink)}table{width:100%;border-collapse:collapse;min-width:1720px}th,td{padding:13px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}thead th{font-size:12px;color:var(--muted);background:#f8f9fa;position:sticky;top:0}td b,td strong{font-size:14px}td small{display:block;color:var(--muted);margin-top:5px;line-height:1.4}.stock-link{color:var(--ink);white-space:nowrap}.status{border-left:3px solid var(--muted);padding-left:7px;font-weight:800}.status-ready{border-color:#267358;color:#267358}.status-wait{border-color:#b98527;color:#8a651d}.status-risk{border-color:#c6542d;color:#c6542d}.positive{font-size:13px;line-height:1.45}.risk{color:var(--orange)}.source-link{display:block;margin-top:7px;font-size:11px;font-weight:700}.news a,.news span{display:block;font-size:12px;line-height:1.4;margin-bottom:8px}.news a small{font-size:10px}.empty{padding:24px;border-top:1px solid var(--line);color:var(--muted)}.history-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.history img{width:100%}.history table{min-width:620px}.market-news{margin:0;padding:0;list-style:none;border-top:1px solid var(--ink)}.market-news li{padding:10px 0;border-bottom:1px solid var(--line)}.market-news span{display:block;color:var(--muted);font-size:11px;margin-top:3px}footer{max-width:1240px;margin:auto;padding:20px 24px 40px;color:var(--muted);font-size:12px}
+@media(max-width:820px){header{padding:24px 18px}header h1{font-size:24px}.kpis{grid-template-columns:repeat(2,1fr)}.kpi:nth-child(2n){border-right:0}.visuals,.history-grid{grid-template-columns:1fr}.visuals,.band,.pipeline{padding-left:16px;padding-right:16px}.section-head{display:block}.section-head p{margin-top:8px}}
+</style></head><body>
+<header><span class="eyebrow">ROBERTO STOCK RESEARCH</span><h1>每日籌碼研究</h1><p>2026-10-19 · 法人加速度 × 相對強弱／量價 × 融資籌碼 × 每週集保 × 基本面</p></header>
+<main>
+  <div class="database-link"><a href="../../leaderboard.html">開啟資料庫排行榜與個股 Chart</a></div>
+  <section class="kpis">
+    <div class="kpi"><span>市場情緒</span><b>偏空</b></div>
+    <div class="kpi"><span>近5日法人合計</span><b>-9,753,172 張</b></div>
+    <div class="kpi"><span>篩選池上漲比例</span><b>36.8%</b></div>
+    <div class="kpi"><span>籌碼好 / RSI低</span><b>6 檔</b></div>
+    <div class="kpi"><span>籌碼差 / 價跌</span><b>15 檔</b></div>
+  </section>
+  <section class="visuals"><figure><img src="quadrant_map.png" alt="每日法人分數與五日價格報酬象限圖"><figcaption>橫軸以原本 Stock 的近5日三大法人流向為主；集保只做每週排序確認。</figcaption></figure><figure><img src="group_counts.png" alt="四類訊號股票數"><figcaption>四組每天依法人、RSI與價格更新，不等待每週集保換日。</figcaption></figure></section>
+  <section class="pipeline"><figure><img src="signal_pipeline.png" alt="每日籌碼研究流程示意圖"></figure></section>
+  <section class="band"><div class="section-head"><div><span class="eyebrow">EPS × PE VALUATION</span><h2>法人常用的相對估值</h2></div><p>顯示保守、基準與樂觀估值帶，不把單一數字包裝成精準目標價。</p></div><p class="method-note">最新累計 EPS 依季數年化 × 同產業有效 P/E 的 Q25／中位數／Q75。排除本公司、非正 P/E，並以 1.5×IQR 排除離群值。估值帶是公開資料篩選值，不是法人目標價；未使用分析師預估 EPS。</p></section>
+  <section class="band"><div class="section-head"><div><span class="eyebrow">MOOD × MONEY</span><h2>情緒與籌碼雷達</h2></div><p>熱度代表被討論程度；情緒分與法人方向分開計算。熱門不等於適合追價，樣本不足也不硬判多空。</p></div><div class="table-wrap"><table><thead><tr><th>股票</th><th>情緒</th><th>討論熱度</th><th>情緒 × 籌碼</th><th>情緒 × 基本面</th></tr></thead><tbody>
+      <tr>
+        <td><strong>2027 大成鋼</strong><small>強勢過熱</small></td>
+        <td><b>偏多 +22.6</b><small>信心 62</small></td>
+        <td><b>100</b><small>1 篇 / 77 留言 / 1 則新聞</small></td>
+        <td>情籌共振<small>法人分 +6.8</small></td>
+        <td>基本面與情緒共振<small>基本面分 +3.6</small></td>
+      </tr>
+    
+      <tr>
+        <td><strong>1815 富喬</strong><small>強勢過熱</small></td>
+        <td><b>情緒高漲 +58.5</b><small>信心 81</small></td>
+        <td><b>97</b><small>1 篇 / 60 留言 / 3 則新聞</small></td>
+        <td>情籌共振<small>法人分 +5.0</small></td>
+        <td>基本面與情緒共振<small>基本面分 +3.6</small></td>
+      </tr>
+    
+      <tr>
+        <td><strong>2408 南亞科</strong><small>同步轉弱</small></td>
+        <td><b>偏空 -32.5</b><small>信心 67</small></td>
+        <td><b>89</b><small>1 篇 / 38 留言 / 3 則新聞</small></td>
+        <td>情籌雙弱<small>法人分 -5.8</small></td>
+        <td>基本面佳、情緒悲觀<small>基本面分 +3.6</small></td>
+      </tr>
+    
+      <tr>
+        <td><strong>6278 台表科</strong><small>強勢過熱</small></td>
+        <td><b>偏多 +28.8</b><small>信心 63</small></td>
+        <td><b>80</b><small>1 篇 / 20 留言 / 3 則新聞</small></td>
+        <td>情籌共振<small>法人分 +6.8</small></td>
+        <td>基本面與情緒共振<small>基本面分 +2.4</small></td>
+      </tr>
+    
+      <tr>
+        <td><strong>1216 統一</strong><small>強勢過熱</small></td>
+        <td><b>偏多 +25.9</b><small>信心 49</small></td>
+        <td><b>75</b><small>1 篇 / 16 留言 / 2 則新聞</small></td>
+        <td>情籌共振<small>法人分 +6.8</small></td>
+        <td>基本面與情緒共振<small>基本面分 +1.8</small></td>
+      </tr>
+    
+      <tr>
+        <td><strong>6488 環球晶</strong><small>同步轉弱</small></td>
+        <td><b>中性分歧 +0.0</b><small>信心 30</small></td>
+        <td><b>52</b><small>0 篇 / 0 留言 / 3 則新聞</small></td>
+        <td>情籌混合<small>法人分 -6.5</small></td>
+        <td>基本面與情緒分歧<small>基本面分 -0.1</small></td>
+      </tr>
+    
+      <tr>
+        <td><strong>6182 合晶</strong><small>同步轉弱</small></td>
+        <td><b>中性分歧 +0.0</b><small>信心 30</small></td>
+        <td><b>52</b><small>0 篇 / 0 留言 / 3 則新聞</small></td>
+        <td>情籌混合<small>法人分 -4.3</small></td>
+        <td>基本面與情緒分歧<small>基本面分 +3.0</small></td>
+      </tr>
+    
+      <tr>
+        <td><strong>2327 國巨*</strong><small>同步轉弱</small></td>
+        <td><b>偏多 +29.7</b><small>信心 30</small></td>
+        <td><b>52</b><small>0 篇 / 0 留言 / 3 則新聞</small></td>
+        <td>熱門但法人撤退<small>法人分 -4.8</small></td>
+        <td>基本面與情緒共振<small>基本面分 +3.6</small></td>
+      </tr>
+    
+      <tr>
+        <td><strong>2360 致茂</strong><small>同步轉弱</small></td>
+        <td><b>偏多 +29.7</b><small>信心 30</small></td>
+        <td><b>52</b><small>0 篇 / 0 留言 / 3 則新聞</small></td>
+        <td>熱門但法人撤退<small>法人分 -4.6</small></td>
+        <td>基本面與情緒共振<small>基本面分 +3.6</small></td>
+      </tr>
+    
+      <tr>
+        <td><strong>3624 光頡</strong><small>同步轉弱</small></td>
+        <td><b>中性分歧 +0.0</b><small>信心 30</small></td>
+        <td><b>52</b><small>0 篇 / 0 留言 / 3 則新聞</small></td>
+        <td>情籌混合<small>法人分 -4.5</small></td>
+        <td>基本面與情緒分歧<small>基本面分 +3.6</small></td>
+      </tr>
+    
+      <tr>
+        <td><strong>2308 台達電</strong><small>同步轉弱</small></td>
+        <td><b>中性分歧 +0.0</b><small>信心 30</small></td>
+        <td><b>52</b><small>0 篇 / 0 留言 / 3 則新聞</small></td>
+        <td>情籌混合<small>法人分 -5.8</small></td>
+        <td>基本面與情緒分歧<small>基本面分 +3.6</small></td>
+      </tr>
+    
+      <tr>
+        <td><strong>6239 力成</strong><small>同步轉弱</small></td>
+        <td><b>偏空 -29.7</b><small>信心 30</small></td>
+        <td><b>52</b><small>0 篇 / 0 留言 / 3 則新聞</small></td>
+        <td>情籌雙弱<small>法人分 -4.8</small></td>
+        <td>基本面佳、情緒悲觀<small>基本面分 +3.6</small></td>
+      </tr>
+    </tbody></table></div></section>
+  
+      <section class="band" id="good_low_rsi">
+        <div class="section-head"><div><span class="eyebrow">01</span><h2>籌碼好 / RSI低</h2></div><p>優先研究基本面；法人續買且價格止穩時，才適合分批觀察。</p></div>
+        
+    <div class="table-wrap"><table>
+      <thead><tr><th>股票 / 確認狀態</th><th>每日法人分</th><th>浦男式近似</th><th>法人加速度</th><th>RSI / 相對強弱</th><th>量價確認</th><th>融資融券</th><th>每週集保確認</th><th>基本面</th><th>EPS × 同業 P/E 估值</th><th>情緒 / 情籌</th><th>近期消息</th><th>論壇討論</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=3702" target="_blank" rel="noreferrer"><strong>3702</strong> 大聯大</a><small class="status status-wait">等待確認 · 76 分</small><small>籌碼有訊號，但價格尚未確認</small></td>
+          <td><b>+4.5</b><small>法人 +11,388 張 / 4 天</small></td>
+          <td><b class="status status-wait">接近 · 79</b><small>中期均線偏多；法人籌碼偏多；買超具延續性；留意未站月線、法人買盤未加速</small></td>
+          <td><b>-7,698 張</b><small>近3日 +2,568 / 連續 -1 日</small></td>
+          <td><b>43.2</b><small>相對大盤 +5.9%</small></td>
+          <td><b>量比 1.06</b><small>確認分 -0.0</small><small class="risk">收盤跌破20日線；法人買盤減速</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>+0.30 pp</b><small>1000張 +0.40 pp</small></td>
+          <td><span class="positive">單月營收年增 +146.5%；累計營收年增 +72.5%；2026 Q2 累計 EPS 8.42</span><small class="risk">2026 Q2 累計營益率 2.6%</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=3702" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 211.2</b><small>估值帶 169.2–371.3</small><small>現價 114.5 · 低於估值帶 · 距基準 +84.4%</small><small>2026 Q2 累計 EPS 8.42 → 年化 16.84</small><small>電子通路同業 P/E 10.05／12.54／22.05 · n=31 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>中性分歧 +0.0</b><small>熱度 52 / 信心 30</small><small class="risk">情籌混合</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE1qQjhhWm1vYmVoWUVwcVc1cWxzWU44WTdSUTcxeE1TMng2NVppd21MdlpCNWUzRHlmSll6bFJDTnFxZmZldDNBV1ZUckd5RDU1VGlPY2s3dVo?oc=5" target="_blank" rel="noreferrer">3702 大聯大- 高營收也帶小弟一起飛升160吧！ - 股市爆料同學會<small>CMoney · 08/31</small></a><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1iTnRjdmp1Rm9PbDNabTBRODE4NUpLQVZESm5jNVdSVXpqZGNMN2NXNXFOUEhjT3diTWdNakVmTFJPMVhpeXdRWGpRVXVpWkdOSjdVTkM1Vm5DQdIBX0FVX3lxTFBWSEJrMFRzZGdnU19TZk1fMTdhYnE4RU9RU09zekxfZFY4X0dOaDVid3hIdEVZN0xjNjB1RHBGaHFTeWNIc0EzbWhacG9RZHVZRHh1R0RaQWphamItTU1j?oc=5" target="_blank" rel="noreferrer">大聯大9月營收攻頂飛越2,000億 大漲54% 單季站上5,079億<small>經濟日報 · 10/13</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=2845" target="_blank" rel="noreferrer"><strong>2845</strong> 遠東銀</a><small class="status status-wait">等待確認 · 85 分</small><small>籌碼有訊號，但價格尚未確認</small></td>
+          <td><b>+3.2</b><small>法人 +16,798 張 / 4 天</small></td>
+          <td><b class="status status-wait">接近 · 75</b><small>站上月線；法人籌碼偏多；法人買盤加速；留意中期均線未翻多、明顯弱於大盤</small></td>
+          <td><b>+6,983 張</b><small>近3日 +13,323 / 連續 -1 日</small></td>
+          <td><b>50.0</b><small>相對大盤 -4.3%</small></td>
+          <td><b>量比 1.02</b><small>確認分 +3.2</small><small class="risk">20日線低於60日線；近20日弱於大盤</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>-0.18 pp</b><small>1000張 -0.39 pp</small></td>
+          <td><span class="positive">單月營收年增 +14.0%；累計營收年增 +14.0%；2026 Q2 累計 EPS 0.54</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=2845" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 14.21</b><small>估值帶 7.43–17.38</small><small>現價 13.30 · 估值帶內 · 距基準 +6.9%</small><small>2026 Q2 累計 EPS 0.54 → 年化 1.08</small><small>金融保險同業 P/E 6.88／13.16／16.09 · n=39 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>樣本不足 +0.0</b><small>熱度 31 / 信心 10</small><small class="risk">情緒樣本不足</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFBwcjNZQjV2U3RnX3FscEFSOEN4bnZhNlVfay1JU2Nhd0JNVFkwYWVreHFlYm9NbUtJWHBNeEtOX19PVXNWOGVfZWM3TlJGbm81MmY3Zl9wVF95cVhSV0t2SF85WUpBbGg3aFE?oc=5" target="_blank" rel="noreferrer">台股崩跌融資洗乾淨了？分析師揭「止穩3關鍵訊號」 點名台泥、寶成、遠東銀…10檔「黃金右下角」首選股- 上市櫃<small>旺得富理財網 · 10/19</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=2637" target="_blank" rel="noreferrer"><strong>2637</strong> 慧洋-KY</a><small class="status status-wait">等待確認 · 72 分</small><small>籌碼有訊號，但價格尚未確認</small></td>
+          <td><b>+4.7</b><small>法人 +3,623 張 / 5 天</small></td>
+          <td><b class="status status-wait">接近 · 73</b><small>站上月線；中期均線偏多；法人籌碼偏多；留意法人買盤未加速、明顯弱於大盤</small></td>
+          <td><b>-1,730 張</b><small>近3日 +1,659 / 連續 +7 日</small></td>
+          <td><b>49.1</b><small>相對大盤 -4.6%</small></td>
+          <td><b>量比 0.73</b><small>確認分 -1.4</small><small class="risk">近20日弱於大盤；法人買盤減速</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>+0.16 pp</b><small>1000張 +0.46 pp</small></td>
+          <td><span class="positive">單月營收年增 +24.5%；累計營收年增 +33.8%；2026 Q2 累計 EPS 4.10</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=2637" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 90.77</b><small>估值帶 75.77–118.3</small><small>現價 100.0 · 估值帶內 · 距基準 -9.2%</small><small>2026 Q2 累計 EPS 4.10 → 年化 8.20</small><small>航運業同業 P/E 9.24／11.07／14.43 · n=26 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>偏多 +29.7</b><small>熱度 52 / 信心 30</small><small class="risk">情籌共振</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxPNEtNcHVXZmIxSjZiUUhpZU5Zbzh6WVB6ZVFvUXBZQzVNMTVOTm92TFd6S3IxN28wSVpkLWRyeVV3SkpUSE1ZY2tweFJDY1VNOEZZNWd2QTJONVBYWGkxVTlzcDVvUnR6VWRRMnp5QThseV9sRS1pRi1mckNOSUNIZTJ4ZzBhYU1yeDdVa0V3?oc=5" target="_blank" rel="noreferrer">【12:18 即時新聞】慧洋-KY(2637)股價走強，散裝行情與營收表現成盤中焦點<small>CMoney投資網誌 · 10/13</small></a><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxOTjVReEVTcTJUYXdXRWE4M25WdHNWUHlqN2pSUGZsa3lhMmo3SjVTczZ1VWZoTUxWaUY0aTB2eWJUekoxZGdTSXM0a3FqY1hkX0pyQmdNX1dwQjU4QmlYajljMlE4dEVrbmcwZDB2UW9wRnZ5VENtMXRRM1YwTTdCX0wtc1Z3UXR5RDBmWXFn?oc=5" target="_blank" rel="noreferrer">【12:56 即時新聞】慧洋-KY(2637)股價走強，散裝航運旺季題材受關注<small>CMoney投資網誌 · 10/12</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=6290" target="_blank" rel="noreferrer"><strong>6290</strong> 良維</a><small class="status status-wait">等待確認 · 67 分</small><small>籌碼有訊號，但價格尚未確認</small></td>
+          <td><b>+4.2</b><small>法人 +3,475 張 / 3 天</small></td>
+          <td><b class="status status-wait">接近 · 64</b><small>中期均線偏多；法人籌碼偏多；買超具延續性；留意未站月線、法人買盤未加速</small></td>
+          <td><b>-6,423 張</b><small>近3日 -1,876 / 連續 +1 日</small></td>
+          <td><b>43.7</b><small>相對大盤 -3.8%</small></td>
+          <td><b>量比 1.01</b><small>確認分 -2.5</small><small class="risk">收盤跌破20日線；近20日弱於大盤；法人買盤減速</small></td>
+          <td><b>+4.5%</b><small>融資 +707 張 / 融券 +38 張</small></td>
+          <td><b>+2.51 pp</b><small>1000張 +0.60 pp</small></td>
+          <td><span class="positive">單月營收年增 +15.7%；累計營收年增 +10.1%；2026 Q2 累計 EPS 4.50</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=6290" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 242.2</b><small>估值帶 160.7–403.8</small><small>現價 259.5 · 估值帶內 · 距基準 -6.7%</small><small>2026 Q2 累計 EPS 4.50 → 年化 9.00</small><small>電子零組件同業 P/E 17.85／26.91／44.87 · n=148 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.tpex.org.tw/openapi/v1/tpex_mainboard_peratio_analysis" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>中性分歧 +0.0</b><small>熱度 44 / 信心 20</small><small class="risk">情籌混合</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxNTERNQ2U4djVhOGRuSzk5MVpEb0xjWnpyZldNenczNVJrUHRDNXlIcTJOY0hpN1Vic282aUJZdFZ2VEE5UHRaeWVPZ2hGZTNpbXNGdkhQLVlhNVVKLW5yWXdfVjc3aVhmLWM0RU5KTzJwbWh3UnpmdWFhZEpUSm9wQklsNUF5STVEMjJpYmVn?oc=5" target="_blank" rel="noreferrer">【09:54 即時新聞】良維(6290)亮燈漲停，AI與CSP題材買盤拉抬<small>CMoney投資網誌 · 10/14</small></a><a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNaDdETExweG5nMnM5dHd1bjloNWMyX1dBZS0yeUNnYWZXUU56VGRiRjdtTm9JbV9Ddm1wV0lEWEZXbi1KSmQ0SVY5QURaYms3LUFreTlNRlV6VVA5YkVaXzlUMXVwMnlPWWVfaC0xSjFWT1RRbnU4YVptNk1ja09KM3Vzbw?oc=5" target="_blank" rel="noreferrer">良維9月營收10.59 億元<small>TechNews 科技新報 · 10/08</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=6271" target="_blank" rel="noreferrer"><strong>6271</strong> 同欣電</a><small class="status status-wait">等待確認 · 64 分</small><small>籌碼有訊號，但價格尚未確認</small></td>
+          <td><b>+5.0</b><small>法人 +3,180 張 / 3 天</small></td>
+          <td><b class="status status-wait">接近 · 58</b><small>中期均線偏多；法人籌碼偏多；買超具延續性；留意未站月線、法人買盤未加速</small></td>
+          <td><b>-2,650 張</b><small>近3日 +450 / 連續 +1 日</small></td>
+          <td><b>46.5</b><small>相對大盤 -3.2%</small></td>
+          <td><b>量比 0.64</b><small>確認分 -3.6</small><small class="risk">收盤跌破20日線；近20日弱於大盤；成交量不足；法人買盤減速</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>+2.75 pp</b><small>1000張 +1.85 pp</small></td>
+          <td><span class="positive">單月營收年增 +22.1%；累計營收年增 +8.5%；2026 Q2 累計 EPS 4.37</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=6271" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 228.0</b><small>估值帶 147.4–397.0</small><small>現價 225.5 · 估值帶內 · 距基準 +1.1%</small><small>2026 Q2 累計 EPS 4.37 → 年化 8.74</small><small>半導體同業 P/E 16.87／26.09／45.42 · n=148 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>樣本不足 +0.0</b><small>熱度 31 / 信心 10</small><small class="risk">情緒樣本不足</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1rTmt2YjdYYU9QaDBqZjNkWWxjT0cxS3ZramxJdGdLTHBLOWtaSldDWTVsa3U4VFZJbGVJU0p4dGkzazJGRWlVSjNQSmlJbXM3NDhMTGJoN3oyY1BJaXlMaUxhV0ZBeVU?oc=5" target="_blank" rel="noreferrer">【同欣電法說會重點內容備忘錄】未來展望趨勢 20260805<small>富果直送 · 08/05</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=9910" target="_blank" rel="noreferrer"><strong>9910</strong> 豐泰</a><small class="status status-ready">可研究 · 80 分</small><small>籌碼與價格確認，可列研究清單</small></td>
+          <td><b>+3.7</b><small>法人 +4,391 張 / 5 天</small></td>
+          <td><b class="status status-wait">接近 · 67</b><small>站上月線；法人籌碼偏多；法人買盤加速；留意中期均線未翻多、相對強度普通</small></td>
+          <td><b>+2,456 張</b><small>近3日 +3,616 / 連續 +6 日</small></td>
+          <td><b>43.2</b><small>相對大盤 -0.9%</small></td>
+          <td><b>量比 1.35</b><small>確認分 +2.8</small><small class="risk">20日線低於60日線</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>-0.22 pp</b><small>1000張 -0.35 pp</small></td>
+          <td><span class="positive">2026 Q2 累計 EPS 1.71</span><small class="risk">單月營收年增 -4.8%；累計營收年增 -3.1%；2026 Q2 累計營益率 5.0%</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=9910" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 40.49</b><small>估值帶 32.76–49.45</small><small>現價 68.30 · 高於估值帶 · 距基準 -40.7%</small><small>2026 Q2 累計 EPS 1.71 → 年化 3.42</small><small>運動休閒同業 P/E 9.58／11.84／14.46 · n=20 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>中性分歧 -9.9</b><small>熱度 52 / 信心 30</small><small class="risk">情籌混合</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWkFLYkhuYS0yVl84a05lTmp0bllqUF81emRFV3hUU2lXRVZDT084cE5QUUY4a21IbkVBb0NOM180VW5XazE5QWdIWk5VMGpRV1dzak5kM2FYVUluRW1UV3dfVVlqbFZuUFlaVWNkaWRqUW9rZUpOUmQ1eGVFbTZZNThLOU13bEZt?oc=5" target="_blank" rel="noreferrer">《一週投信賣超6-6》豐泰(219)、巨大(199)、jpp-KY(196)<small>富聯網 · 10/19</small></a><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQRU9SRjdnWUhmUzEzeWYtbWRHaWtxTVl3enhhbExPXy1kcFFsQVJveG13TkxSLV81cWQyamI1amFyTXRraWhxQlJuOVBtUDNkcFZwcGkxWDNwREhwRnh4U2xzd0VnMXR2NS16VFJBbFdPczZMZGRmelV3VUtBeHFlRGdOMDZvZmZa?oc=5" target="_blank" rel="noreferrer">《投信賣超6-6》光寶科(111)、豐泰(108)<small>富聯網 · 10/19</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr></tbody></table></div>
+      </section>
+    
+      <section class="band" id="good_high_rsi">
+        <div class="section-head"><div><span class="eyebrow">02</span><h2>籌碼好 / RSI高</h2></div><p>趨勢強但不追價，等待量縮、RSI降溫或回測支撐。</p></div>
+        
+    <div class="table-wrap"><table>
+      <thead><tr><th>股票 / 確認狀態</th><th>每日法人分</th><th>浦男式近似</th><th>法人加速度</th><th>RSI / 相對強弱</th><th>量價確認</th><th>融資融券</th><th>每週集保確認</th><th>基本面</th><th>EPS × 同業 P/E 估值</th><th>情緒 / 情籌</th><th>近期消息</th><th>論壇討論</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=6278" target="_blank" rel="noreferrer"><strong>6278</strong> 台表科</a><small class="status status-wait">等待拉回 · 100 分</small><small>等拉回，不追價</small></td>
+          <td><b>+6.8</b><small>法人 +25,116 張 / 5 天</small></td>
+          <td><b class="status status-wait">接近 · 90</b><small>站上月線；中期均線偏多；法人籌碼偏多；留意RSI過熱</small></td>
+          <td><b>+3,239 張</b><small>近3日 +16,765 / 連續 +10 日</small></td>
+          <td><b>79.9</b><small>相對大盤 +56.1%</small></td>
+          <td><b>量比 1.05</b><small>確認分 +6.5</small><small class="risk">價格、量能與籌碼未見明顯弱項</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>+11.71 pp</b><small>1000張 +12.77 pp</small></td>
+          <td><span class="positive">單月營收年增 +15.9%；累計營收年增 +6.5%；2026 Q2 累計 EPS 4.93</span><small class="risk">2026 Q2 累計營益率 6.0%</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=6278" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 230.6</b><small>估值帶 123.2–363.8</small><small>現價 289.5 · 估值帶內 · 距基準 -20.3%</small><small>2026 Q2 累計 EPS 4.93 → 年化 9.86</small><small>光電同業 P/E 12.49／23.39／36.90 · n=68 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>偏多 +28.8</b><small>熱度 80 / 信心 63</small><small class="risk">情籌共振</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE1mWmRBZTRtOU4xRU9sTEpnTFI2MGEzNnM1MGh6eUpoUnN6V3pLeURCOE9qSHQ1bFZXdkZqZXprTHhQNjdBU3BJSXk5RmtLVHltVGc3NUJmS1M?oc=5" target="_blank" rel="noreferrer">6278 台表科- 2026/10/16 利K賺選股方針- 股市爆料同學會<small>CMoney · 10/15</small></a><a href="https://news.google.com/rss/articles/CBMijARBVV95cUxPdUhldjRzUHR5VG54OEI2X1FUSEFaMHVDVmlIeUFPT00tSS1iNVVVZ0t1Y0E3akRTdW9LNzhMLTJzcERxMkd2ckZYa2ZpZE1tT083X1M1dHZ4QU1FSU9SRVM0bVc2MHlPMExKVHY1OEgySDZCUFhOVmliQ3BYNUgySEhERFQ0QlpTb0VmWmthZUVyMW4wR3FiVTRuRnhDXzRyZlRJVUFCeUs5Uk5FVlhKei11NUVRZFF4YUszMDNxZVJEd2xpbjJBakNQMF9GdWFiVnpNd3JzTGtwUkdtQ0I1ZVBMU2RGOFBKVnFaNE0wT1VWRi03U21nRjZsWWFYanpINHNjVHVNUndzS3pLanh0bTVOZk9UUEZwWVhIYld6LWFKMTl3WWtVcWZJWFFacU1WejJWN284bGdqSlRIOVpTVjJPTWQyY0FVc1U1WmZPSElOYmxiQ3hObHhfX1IzTWtlT29hRlBrYlpvaUdWU0JiQzFEaUZYVUxmNlpUM0xENjdzUThWcXFSOXYyYnZncklWc1JrcmJyTk9KT25jdG9XNHpZU1g3ZWZvMUI1WEQ4cE1sTVZ1ME9MZlYyM1NFZXBubDdNQ3FhY1NzR25xOGpyRkxhNV9KSDUwYXlJd3czRmxNd3hSOGQtV1QtNVQ3Q1hoSXFrLWVCTC1HRHRjZktYYlEzZHZpbWp5S1VBNA?oc=5" target="_blank" rel="noreferrer">利空出盡噴出！台股開盤上攻200點12檔亮出漲停 「5檔上市個股」亮眼吸金台虹、台表科都入列<small>Yahoo股市 · 10/14</small></a></td>
+          <td class="news"><a href="https://www.ptt.cc/bbs/Stock/M.1792048983.A.195.html" target="_blank" rel="noreferrer">[情報] 6278 台表科 9月自結:1.31 年增:47.19%<small>PTT Stock · 10-15 · 20 留言</small></a></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=2027" target="_blank" rel="noreferrer"><strong>2027</strong> 大成鋼</a><small class="status status-wait">等待拉回 · 100 分</small><small>等拉回，不追價</small></td>
+          <td><b>+6.8</b><small>法人 +30,745 張 / 5 天</small></td>
+          <td><b class="status status-ready">命中 · 96</b><small>站上月線；中期均線偏多；法人籌碼偏多；留意動能位置非最佳</small></td>
+          <td><b>+3,679 張</b><small>近3日 +17,320 / 連續 +9 日</small></td>
+          <td><b>76.6</b><small>相對大盤 +7.4%</small></td>
+          <td><b>量比 0.97</b><small>確認分 +6.1</small><small class="risk">價格、量能與籌碼未見明顯弱項</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>+0.71 pp</b><small>1000張 +0.54 pp</small></td>
+          <td><span class="positive">單月營收年增 +41.1%；累計營收年增 +35.0%；2026 Q2 累計 EPS 3.10</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=2027" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 78.00</b><small>估值帶 65.35–96.97</small><small>現價 51.00 · 低於估值帶 · 距基準 +52.9%</small><small>2026 Q2 累計 EPS 3.10 → 年化 6.20</small><small>鋼鐵工業同業 P/E 10.54／12.58／15.64 · n=27 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>偏多 +22.6</b><small>熱度 100 / 信心 62</small><small class="risk">情籌共振</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFBiQTM4eWNGdjJOcUtIYlh1aTdGWi13dThSM2JWY0dfblQ3RnNVNTdJeXV4NWp5UHNtcnJwb3phU3lpdEI0dXAydk4xdVkxWE9KRHY4eGNDelVCTnPSAWBBVV95cUxOLVZJMHVnTTJfT0NJTG0yX18zZWlxTVl2WjlGQUN6ZnZRN0lUdzh3TEN3Qkc0WldnRTBEUnAwRVBQWFVEa0JlTnFwWjlQb3NGU2prU2JMaTJ1Wkx6S2JBM2Q?oc=5" target="_blank" rel="noreferrer">2027年高階玻纖布續缺 富喬擴產營運旺亮燈漲停<small>經濟日報 · 10/19</small></a></td>
+          <td class="news"><a href="https://www.ptt.cc/bbs/Stock/M.1792240347.A.C4F.html" target="_blank" rel="noreferrer">[新聞] IMF發布報告 預計中國經濟2027年進一步放<small>PTT Stock · 10-17 · 77 留言</small></a></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=3265" target="_blank" rel="noreferrer"><strong>3265</strong> 台星科</a><small class="status status-wait">等待拉回 · 94 分</small><small>等拉回，不追價</small></td>
+          <td><b>+5.8</b><small>法人 +3,740 張 / 4 天</small></td>
+          <td><b class="status status-wait">接近 · 79</b><small>站上月線；中期均線偏多；法人籌碼偏多；留意法人買盤未加速、量能異常</small></td>
+          <td><b>-5,937 張</b><small>近3日 +34 / 連續 -1 日</small></td>
+          <td><b>71.5</b><small>相對大盤 +52.8%</small></td>
+          <td><b>量比 0.58</b><small>確認分 +0.6</small><small class="risk">成交量不足；法人買盤減速；融資單日增幅偏高</small></td>
+          <td><b>+6.1%</b><small>融資 +245 張 / 融券 -13 張</small></td>
+          <td><b>+6.50 pp</b><small>1000張 +6.49 pp</small></td>
+          <td><span class="positive">單月營收年增 +11.5%；累計營收年增 +15.9%；2026 Q2 累計 EPS 3.85</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=3265" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 199.9</b><small>估值帶 129.9–349.7</small><small>現價 251.0 · 估值帶內 · 距基準 -20.4%</small><small>2026 Q2 累計 EPS 3.85 → 年化 7.70</small><small>半導體同業 P/E 16.87／25.96／45.42 · n=148 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.tpex.org.tw/openapi/v1/tpex_mainboard_peratio_analysis" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>樣本不足 +0.0</b><small>熱度 0 / 信心 0</small><small class="risk">情緒樣本不足</small></td>
+          <td class="news"><span>近期沒有通過股票語境篩選的新聞</span></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=3034" target="_blank" rel="noreferrer"><strong>3034</strong> 聯詠</a><small class="status status-wait">等待拉回 · 100 分</small><small>等拉回，不追價</small></td>
+          <td><b>+6.8</b><small>法人 +8,396 張 / 5 天</small></td>
+          <td><b class="status status-ready">命中 · 96</b><small>站上月線；中期均線偏多；法人籌碼偏多；留意動能位置非最佳</small></td>
+          <td><b>+900 張</b><small>近3日 +4,565 / 連續 +5 日</small></td>
+          <td><b>71.0</b><small>相對大盤 +4.6%</small></td>
+          <td><b>量比 1.40</b><small>確認分 +5.5</small><small class="risk">價格、量能與籌碼未見明顯弱項</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>+0.61 pp</b><small>1000張 -0.49 pp</small></td>
+          <td><span class="positive">單月營收年增 +25.0%；累計營收年增 +6.3%；2026 Q2 累計 EPS 16.59</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=3034" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 865.7</b><small>估值帶 559.8–1,507</small><small>現價 585.0 · 估值帶內 · 距基準 +48.0%</small><small>2026 Q2 累計 EPS 16.59 → 年化 33.18</small><small>半導體同業 P/E 16.87／26.09／45.42 · n=148 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>樣本不足 +0.0</b><small>熱度 31 / 信心 10</small><small class="risk">情緒樣本不足</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE9hSG1rNmZnYWxJNHplVDNhdkZRWUNJdFIxeFUtaVBnLS1TRGJFS1RTVFFHaThkQ2JzelRwb0NPR0VoeEkwMlNZU2ROQkl4dHptcTQtVUdqQ2k?oc=5" target="_blank" rel="noreferrer">3034 聯詠- 各產業龍頭股＆關注股10/19 收盤價更新｜ - 股市爆料同學會<small>CMoney · 10/19</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=6209" target="_blank" rel="noreferrer"><strong>6209</strong> 今國光</a><small class="status status-wait">等待拉回 · 100 分</small><small>等拉回，不追價</small></td>
+          <td><b>+4.5</b><small>法人 +14,247 張 / 3 天</small></td>
+          <td><b class="status status-wait">接近 · 85</b><small>站上月線；中期均線偏多；法人籌碼偏多；留意量能尚未確認、RSI過熱</small></td>
+          <td><b>+18,889 張</b><small>近3日 +15,914 / 連續 -1 日</small></td>
+          <td><b>87.5</b><small>相對大盤 +25.4%</small></td>
+          <td><b>量比 2.71</b><small>確認分 +5.8</small><small class="risk">價格、量能與籌碼未見明顯弱項</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>+9.85 pp</b><small>1000張 +10.39 pp</small></td>
+          <td><span class="positive">單月營收年增 +81.6%；累計營收年增 +71.4%；2026 Q2 累計 EPS 1.53</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=6209" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 71.57</b><small>估值帶 38.22–108.3</small><small>現價 102.0 · 估值帶內 · 距基準 -29.8%</small><small>2026 Q2 累計 EPS 1.53 → 年化 3.06</small><small>光電同業 P/E 12.49／23.39／35.41 · n=68 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>中性分歧 +0.0</b><small>熱度 44 / 信心 20</small><small class="risk">情籌混合</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTFBvMkMyVnhtclVjNVVqNUIwdVFXME10eWhkbGNOQWtVdUE3VDNpU2dGWi10WmgyOE5aWVVPczc2RnR2MFF0U25xbklRUUxTQnJZLTlYZU0yeEV4X3l0TndR0gFkQVVfeXFMTWxVQzZXdjVnMy1ob2R4SmE2VGhlMGJZTjdHTl8wcldBZS1Nc2EwRUFtUEF4aWJSS2E1Q3d2dEtsSHgyQzYxVXItQmJFUGJSeThfTTNzR1ZOQVpfY3N6ak5Va3dBUw?oc=5" target="_blank" rel="noreferrer">焦點股》今國光：光學族群走弱 股價衝高後翻黑<small>自由財經 · 10/19</small></a><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxPeUFHSGVXOXVyclZDOHl6c2tsVHlpWUxkZ2xNemVrS09VVjkwcGNLb0ZmUFFmYXI3alBxVk5Ld1Q1N0FtQlpPRkhuOXVEV1Nkc0ZZM1hwMUJBdHFfY0tnQlVFelR2N3FKOXFVSGs2clBTSUJHTGd0NkNBQll6c1h5YWItYUpoZ0dBbXZPNUhB?oc=5" target="_blank" rel="noreferrer">【11:53 即時新聞】今國光(6209)盤中走強，市場聚焦主力與法人買盤延續<small>CMoney投資網誌 · 10/19</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=8213" target="_blank" rel="noreferrer"><strong>8213</strong> 志超</a><small class="status status-wait">等待拉回 · 95 分</small><small>等拉回，不追價</small></td>
+          <td><b>+6.2</b><small>法人 +3,351 張 / 5 天</small></td>
+          <td><b class="status status-ready">命中 · 84</b><small>站上月線；中期均線偏多；法人籌碼偏多；留意法人買盤未加速、量能尚未確認</small></td>
+          <td><b>-1,223 張</b><small>近3日 +1,343 / 連續 +10 日</small></td>
+          <td><b>71.8</b><small>相對大盤 +17.6%</small></td>
+          <td><b>量比 0.72</b><small>確認分 +1.8</small><small class="risk">法人買盤減速</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>+1.78 pp</b><small>1000張 +2.80 pp</small></td>
+          <td><span class="positive">單月營收年增 +50.6%；累計營收年增 +20.8%；2026 Q2 累計 EPS 0.93</span><small class="risk">2026 Q2 累計營益率 3.5%</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=8213" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 51.02</b><small>估值帶 33.20–83.46</small><small>現價 38.90 · 估值帶內 · 距基準 +31.2%</small><small>2026 Q2 累計 EPS 0.93 → 年化 1.86</small><small>電子零組件同業 P/E 17.85／27.43／44.87 · n=148 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>樣本不足 +0.0</b><small>熱度 0 / 信心 0</small><small class="risk">情緒樣本不足</small></td>
+          <td class="news"><span>近期沒有通過股票語境篩選的新聞</span></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=1815" target="_blank" rel="noreferrer"><strong>1815</strong> 富喬</a><small class="status status-wait">等待拉回 · 100 分</small><small>等拉回，不追價</small></td>
+          <td><b>+5.0</b><small>法人 +43,800 張 / 3 天</small></td>
+          <td><b class="status status-wait">接近 · 85</b><small>站上月線；中期均線偏多；法人籌碼偏多；留意量能尚未確認、RSI過熱</small></td>
+          <td><b>+64,867 張</b><small>近3日 +50,120 / 連續 +2 日</small></td>
+          <td><b>79.7</b><small>相對大盤 +27.8%</small></td>
+          <td><b>量比 2.73</b><small>確認分 +6.3</small><small class="risk">價格、量能與籌碼未見明顯弱項</small></td>
+          <td><b>-4.9%</b><small>融資 -2,316 張 / 融券 +1,124 張</small></td>
+          <td><b>+1.25 pp</b><small>1000張 +1.22 pp</small></td>
+          <td><span class="positive">單月營收年增 +82.1%；累計營收年增 +54.9%；2026 Q2 累計 EPS 2.24</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=1815" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 120.6</b><small>估值帶 79.97–201.0</small><small>現價 154.0 · 估值帶內 · 距基準 -21.7%</small><small>2026 Q2 累計 EPS 2.24 → 年化 4.48</small><small>電子零組件同業 P/E 17.85／26.91／44.87 · n=148 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.tpex.org.tw/openapi/v1/tpex_mainboard_peratio_analysis" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>情緒高漲 +58.5</b><small>熱度 97 / 信心 81</small><small class="risk">情籌共振</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE1jYkFIVTI0eEhyekYydW4wMVZWZEJmbVlOdnRLS3BLMWFfaVA4YXc1bkxqWGEwaFFtMEJySGtlQ3NFdjhrVXMzTm54T3d6Umc?oc=5" target="_blank" rel="noreferrer">〈焦點股〉富喬泰國新廠動工 逆勢爆量攻漲停創天價<small>鉅亨網 · 10/19</small></a><a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTFB1eFpMRnQ4TS1DV0lOQ1V5TUJlcEx2UVE5SW9iNGdFY0tnckdvLXFpQk9OUnhiYW16QjJvQmN5d05ob3ZoS2NsQVZtOVZsWjdhaVpSdE42cUVBUC1ZSzNkUG0tQXREUQ?oc=5" target="_blank" rel="noreferrer">富喬9月毛利率逼近52%：漲價與高階升級，獲利能走多遠？<small>口袋證券 · 10/19</small></a></td>
+          <td class="news"><a href="https://www.ptt.cc/bbs/Stock/M.1792156033.A.BA5.html" target="_blank" rel="noreferrer">[情報] 1815 富喬 9月自結:0.56 年增:273.33%<small>PTT Stock · 10-16 · 60 留言</small></a></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=1216" target="_blank" rel="noreferrer"><strong>1216</strong> 統一</a><small class="status status-wait">等待拉回 · 100 分</small><small>等拉回，不追價</small></td>
+          <td><b>+6.8</b><small>法人 +64,662 張 / 5 天</small></td>
+          <td><b class="status status-wait">接近 · 82</b><small>站上月線；法人籌碼偏多；法人買盤加速；留意中期均線未翻多、動能位置非最佳</small></td>
+          <td><b>+18,148 張</b><small>近3日 +44,204 / 連續 +9 日</small></td>
+          <td><b>77.4</b><small>相對大盤 +4.7%</small></td>
+          <td><b>量比 1.36</b><small>確認分 +5.7</small><small class="risk">20日線低於60日線</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>+0.42 pp</b><small>1000張 +0.41 pp</small></td>
+          <td><span class="positive">單月營收年增 +5.8%；累計營收年增 +4.2%；2026 Q2 累計 EPS 2.56</span><small class="risk">2026 Q2 累計營益率 5.9%</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=1216" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 78.90</b><small>估值帶 62.67–98.20</small><small>現價 79.60 · 估值帶內 · 距基準 -0.9%</small><small>2026 Q2 累計 EPS 2.56 → 年化 5.12</small><small>食品工業同業 P/E 12.24／15.41／19.18 · n=24 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>偏多 +25.9</b><small>熱度 75 / 信心 49</small><small class="risk">情籌共振</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMi1ARBVV95cUxOSFBXeS1NNU04MFUxVy1XREc1cVF4eUdXSVZjNkhvWURGRy1HcjVfR3VMVkswMnVWUklwTWV0TllENTJKaEpyUXJmNzUwX2N4Z3dhUzRBdWhieVZ3V1FzdWs4ZHR0aHBUSlM2Z1puYnE3NEctdEJkNFRaOHUzRGZUOUtVSExicWNQdExPTk5IdXFJdWRlVU44dTYyeFBPNGpLajh3RWNDMVBMR3lLbU1ibUw2MFZTNWVUSWtXUm9ELXNGeVQwZE9Ia1YwVkxYYkhOb3hZWklLa1dkYW9VVGNPcEtwMEVzamxhVlMxbHZ3WUI4cjRRQTFXQk1UX3JJV3plQkVLSkhRZG1JYnhZNE9vQ0huek5xT1BvVTd2RGY2RFVXUERpMjVGVEhUV0dqNHJvZ2lLeWNoN0xPYVZYQ0F2ajY4UGNiWWRoYjM0bW5RZ0RpRE5WcnMwaGdCTFhjdzduWFg0UE5HaHNlZFVvVm1NZEt5UkV2b2Q2WVRYblBPbGxCNmM1UlJVMld5QzEwejc2Wkk0OW14T0VVbzRLTS1sVnhLMmhMQTFjRXRIRHlqTW9JMGZTZ3N3U0lzQ0ZuNno3c3NFd0doTVFKYU40bUtVZ2Z0ckthSmM0Rmw5V3RkUi1ndFNlX3JoaWk0Tnk1dzlEcm12TUc3YUlXRUpkMTh1Y3FDVkEzcjVlazN5eWtFNlZNZlNncVlvdTVFVXlqTXpCejdQd0lJRkNkYUFjeEpERHhpR09nVnFYUE1qcmlqZzUwZGlEbXo0aXI2Uk5nTG1QWEp2Vw?oc=5" target="_blank" rel="noreferrer">三大法人買賣超 – 外資買超(2412)中華電、(1216)統一，投信買超(2330)台積電、(6274)台燿，法人合計賣超3700.76億元<small>永豐金證券 · 10/19</small></a><a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTFBtcG9jZGFfaEliNDVfX0R5bFNoc1MtQW5uS2xtblZWYVFoQnpEZ1hvVTVKeFRPejBKa1FwYlY5djZOQ2tBb3BiWlFMdzlSclJaNHlJ0gFYQVVfeXFMTzI1WFNrZ2ZrekluQ2k5NWdlOXVtUGNEdEpQVlU0YzBEd2l2bVItVDF4TGxZWTJpdU5VWFEwcVdhTDJGUkJWMmhjaHdhblJCWVJKU2o1dWY2ZQ?oc=5" target="_blank" rel="noreferrer">統一投信再度前進花蓮實現普惠金融 免費理財講座現正報名中<small>UDN · 10/19</small></a></td>
+          <td class="news"><a href="https://www.ptt.cc/bbs/Stock/M.1792059422.A.601.html" target="_blank" rel="noreferrer">Re: [新聞] 統一集團營收 三喜臨門<small>PTT Stock · 10-15 · 16 留言</small></a></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=1476" target="_blank" rel="noreferrer"><strong>1476</strong> 儒鴻</a><small class="status status-wait">等待拉回 · 100 分</small><small>等拉回，不追價</small></td>
+          <td><b>+6.8</b><small>法人 +3,302 張 / 5 天</small></td>
+          <td><b class="status status-wait">接近 · 70</b><small>站上月線；法人籌碼偏多；法人買盤加速；留意中期均線未翻多、量能異常</small></td>
+          <td><b>+1,795 張</b><small>近3日 +2,471 / 連續 +5 日</small></td>
+          <td><b>82.0</b><small>相對大盤 +10.9%</small></td>
+          <td><b>量比 0.59</b><small>確認分 +5.2</small><small class="risk">20日線低於60日線；成交量不足</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>+0.43 pp</b><small>1000張 +0.38 pp</small></td>
+          <td><span class="positive">單月營收年增 +8.3%；累計營收年增 +5.4%；2026 Q2 累計 EPS 12.35</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=1476" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 329.0</b><small>估值帶 250.5–465.4</small><small>現價 321.0 · 估值帶內 · 距基準 +2.5%</small><small>2026 Q2 累計 EPS 12.35 → 年化 24.70</small><small>紡織纖維同業 P/E 10.14／13.32／18.84 · n=34 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>中性分歧 +9.9</b><small>熱度 52 / 信心 30</small><small class="risk">情籌混合</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMi_ARBVV95cUxNNnFrQ3ZuYUNmcG15MlRWdl9IMXVDSWtQa1NKbFBWYXZwLVVNNFlQd2xMVW80MDVuLXZGUXMxMzZPWmk0aW16S0VjQVU4aW4tQkdrX2R4YU42X1lla2ZKNjBWYVg2bFpVWmkzV2dCOUpBUXJQNVo2RXZ4N3VOa04yLVNuYnBvYmZPSmdxeEtpM0M4UEs3Qk1sRVhDTUdmX3pxcHNkVFVJU3gzaldBNFBFcDN4OFNBRno4MWlWbEpQMTRORENyMXgtcWRuamVNOEtpaXpHOGR1YlFXLThSSUV0VndqQ0xwSzVBbENoRDRlUE13aGVmSy01Uzh0aVFoY1paQ013UWd5WTAtZUlWTlhFVmM4V2NpeU9PaWJkcEIyOVlOdzY2TGhmakRnWVlSeDh5aFB6amxXXzVKNE1iRHZQUERRQW8yOXA4UmE1cDNobEVlMjZrQlVGaGZrUVdNYmRJZ1FpU1NYMlRsN3pfaG1Ld24waVhpZmdpZjlqbmNMNExoTDdiMXlGUmlhTE1rcXh5WktZQlQ1U3UzOHZud1dNTDNNS1RVNkZnSW5zdWNBQUV4VDFkSmJYUUUwd3A4VGExbEctSDUyZzF0eHJTUm1fNy1PN0FuckhhT0pmS3NOYXc0Z2pmWjlSOU5xSjQ4VlVDbFFCTzBGcEstUTZOZXlDZkVzTnk4Y2RmUDZieEZLMlFEZUIwNlJZUm1JVzJqbTVuQ1lLNC1oV1h1QkFHSXV6aElFcHBDMnRWU3g3Q0J6VEhzSjk3RFJWcHdJbGNZMmZaWVJ0T25kbE1XWUl4cDN5QmRMSGk1WEZzUDVBdmFmek5VTDNIMkpKaU1sVjI?oc=5" target="_blank" rel="noreferrer">【1019台股盤後】台股下影線狂拉650點！外資轉買櫃買中小、投信持續買超，巴菲特護城河鎖定【聚陽】、【聯強】、【儒鴻】<small>永豐金證券 · 10/19</small></a><a href="https://news.google.com/rss/articles/CBMiywRBVV95cUxQbFRqTkZ5MWZCOWo2MGhybXFVYl91c1ZRMDhhZTMxRXlibU5lU004a2ItcUFpZkpzUVc5MnQwRUkxWEJFS3hyX2t1VXl3aWQyUTdTY1ZaLThsWjc0eHNnZUd1ZUxyRUMzT3g1ZjJnOFBENk5FMXF3MGVJM1JLMnp2Y1JQNExCT0pZeWRVUDBWNVdmeHBuTGN2VTl1SmwtcWIzX1RTMnNQV1dQd1o5NUFZUmhrWEJMMGRlUERHYkVuOWQ4MlV4eUpHMEdUeV9qYkxONGFJaUt2RlZuUWQxUVI3bDZTN2R4OG80eVVKNFVGQWEtX3R2VDE2cDJtTk9MZnVvUDJfbU1FTVU4QndyTzFYancwU3FXZkl3bzgyZDhjRlV3VDNiLXdVVjFrb09abWRFR2NxN0E1V2lHZm9uclA2dDIxdS1ndWRmYVFudmhhZGZQQVU1bFF4bkg1a0tMMjJFbEdQVE1jUllfTWlycDVnUzZMN1R6STZMVUllUEdYQ1Bnbjd6Umwxa3R1REU2RzBXaV9VeEpibmFkckxCanVyZVdEejZfZFJUTDBkNVhPS3M4dzNrR3JfZVNfbnhFaEFmZ0tvT0dUTmsyTXZMTklCa3F3SE5qMTFBamZjSENMRlhIYi1IYnJDUnFPNW16aEdFT3U0THUxdHJ2VmhVNGZrcnNjNmw1U2gtSlhxaS1sY1ZWdE83VlliNVVkX09hRzhGWkJZSmVDZnMzX2VGWDVyb2Y4QjVzbEtYZ0pwZ182VmdXc2tDcy1ZdzAzSQ?oc=5" target="_blank" rel="noreferrer">台股下影線狂拉650點！外資轉買櫃買中小、投信持續買超，巴菲特護城河鎖定#聚陽#聯強#儒鴻｜豐雲學堂2026 年 10 月<small>永豐金證券 · 10/19</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=1477" target="_blank" rel="noreferrer"><strong>1477</strong> 聚陽</a><small class="status status-wait">等待拉回 · 100 分</small><small>等拉回，不追價</small></td>
+          <td><b>+6.0</b><small>法人 +4,868 張 / 5 天</small></td>
+          <td><b class="status status-wait">接近 · 76</b><small>站上月線；法人籌碼偏多；法人買盤加速；留意中期均線未翻多、量能異常</small></td>
+          <td><b>+1,451 張</b><small>近3日 +3,255 / 連續 +10 日</small></td>
+          <td><b>77.0</b><small>相對大盤 +6.5%</small></td>
+          <td><b>量比 0.65</b><small>確認分 +4.8</small><small class="risk">20日線低於60日線；成交量不足</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>+0.49 pp</b><small>1000張 -1.15 pp</small></td>
+          <td><span class="positive">單月營收年增 +24.0%；累計營收年增 +0.2%；2026 Q2 累計 EPS 7.65</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=1477" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 197.2</b><small>估值帶 155.1–288.2</small><small>現價 207.5 · 估值帶內 · 距基準 -5.0%</small><small>2026 Q2 累計 EPS 7.65 → 年化 15.30</small><small>紡織纖維同業 P/E 10.14／12.89／18.84 · n=34 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>偏多 +29.7</b><small>熱度 52 / 信心 30</small><small class="risk">情籌共振</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMi_ARBVV95cUxNNnFrQ3ZuYUNmcG15MlRWdl9IMXVDSWtQa1NKbFBWYXZwLVVNNFlQd2xMVW80MDVuLXZGUXMxMzZPWmk0aW16S0VjQVU4aW4tQkdrX2R4YU42X1lla2ZKNjBWYVg2bFpVWmkzV2dCOUpBUXJQNVo2RXZ4N3VOa04yLVNuYnBvYmZPSmdxeEtpM0M4UEs3Qk1sRVhDTUdmX3pxcHNkVFVJU3gzaldBNFBFcDN4OFNBRno4MWlWbEpQMTRORENyMXgtcWRuamVNOEtpaXpHOGR1YlFXLThSSUV0VndqQ0xwSzVBbENoRDRlUE13aGVmSy01Uzh0aVFoY1paQ013UWd5WTAtZUlWTlhFVmM4V2NpeU9PaWJkcEIyOVlOdzY2TGhmakRnWVlSeDh5aFB6amxXXzVKNE1iRHZQUERRQW8yOXA4UmE1cDNobEVlMjZrQlVGaGZrUVdNYmRJZ1FpU1NYMlRsN3pfaG1Ld24waVhpZmdpZjlqbmNMNExoTDdiMXlGUmlhTE1rcXh5WktZQlQ1U3UzOHZud1dNTDNNS1RVNkZnSW5zdWNBQUV4VDFkSmJYUUUwd3A4VGExbEctSDUyZzF0eHJTUm1fNy1PN0FuckhhT0pmS3NOYXc0Z2pmWjlSOU5xSjQ4VlVDbFFCTzBGcEstUTZOZXlDZkVzTnk4Y2RmUDZieEZLMlFEZUIwNlJZUm1JVzJqbTVuQ1lLNC1oV1h1QkFHSXV6aElFcHBDMnRWU3g3Q0J6VEhzSjk3RFJWcHdJbGNZMmZaWVJ0T25kbE1XWUl4cDN5QmRMSGk1WEZzUDVBdmFmek5VTDNIMkpKaU1sVjI?oc=5" target="_blank" rel="noreferrer">【1019台股盤後】台股下影線狂拉650點！外資轉買櫃買中小、投信持續買超，巴菲特護城河鎖定【聚陽】、【聯強】、【儒鴻】<small>永豐金證券 · 10/19</small></a><a href="https://news.google.com/rss/articles/CBMiywRBVV95cUxQbFRqTkZ5MWZCOWo2MGhybXFVYl91c1ZRMDhhZTMxRXlibU5lU004a2ItcUFpZkpzUVc5MnQwRUkxWEJFS3hyX2t1VXl3aWQyUTdTY1ZaLThsWjc0eHNnZUd1ZUxyRUMzT3g1ZjJnOFBENk5FMXF3MGVJM1JLMnp2Y1JQNExCT0pZeWRVUDBWNVdmeHBuTGN2VTl1SmwtcWIzX1RTMnNQV1dQd1o5NUFZUmhrWEJMMGRlUERHYkVuOWQ4MlV4eUpHMEdUeV9qYkxONGFJaUt2RlZuUWQxUVI3bDZTN2R4OG80eVVKNFVGQWEtX3R2VDE2cDJtTk9MZnVvUDJfbU1FTVU4QndyTzFYancwU3FXZkl3bzgyZDhjRlV3VDNiLXdVVjFrb09abWRFR2NxN0E1V2lHZm9uclA2dDIxdS1ndWRmYVFudmhhZGZQQVU1bFF4bkg1a0tMMjJFbEdQVE1jUllfTWlycDVnUzZMN1R6STZMVUllUEdYQ1Bnbjd6Umwxa3R1REU2RzBXaV9VeEpibmFkckxCanVyZVdEejZfZFJUTDBkNVhPS3M4dzNrR3JfZVNfbnhFaEFmZ0tvT0dUTmsyTXZMTklCa3F3SE5qMTFBamZjSENMRlhIYi1IYnJDUnFPNW16aEdFT3U0THUxdHJ2VmhVNGZrcnNjNmw1U2gtSlhxaS1sY1ZWdE83VlliNVVkX09hRzhGWkJZSmVDZnMzX2VGWDVyb2Y4QjVzbEtYZ0pwZ182VmdXc2tDcy1ZdzAzSQ?oc=5" target="_blank" rel="noreferrer">台股下影線狂拉650點！外資轉買櫃買中小、投信持續買超，巴菲特護城河鎖定#聚陽#聯強#儒鴻｜豐雲學堂2026 年 10 月<small>永豐金證券 · 10/19</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=2105" target="_blank" rel="noreferrer"><strong>2105</strong> 正新</a><small class="status status-wait">等待拉回 · 100 分</small><small>等拉回，不追價</small></td>
+          <td><b>+5.4</b><small>法人 +27,996 張 / 5 天</small></td>
+          <td><b class="status status-wait">接近 · 86</b><small>站上月線；法人籌碼偏多；法人買盤加速；留意中期均線未翻多、動能位置非最佳</small></td>
+          <td><b>+12,231 張</b><small>近3日 +20,398 / 連續 +8 日</small></td>
+          <td><b>76.9</b><small>相對大盤 +5.6%</small></td>
+          <td><b>量比 1.67</b><small>確認分 +5.9</small><small class="risk">20日線低於60日線</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>+0.42 pp</b><small>1000張 +0.64 pp</small></td>
+          <td><span class="positive">單月營收年增 +12.5%；累計營收年增 +6.6%；2026 Q2 累計 EPS 1.05</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=2105" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 24.17</b><small>估值帶 16.44–30.60</small><small>現價 32.20 · 高於估值帶 · 距基準 -24.9%</small><small>2026 Q2 累計 EPS 1.05 → 年化 2.10</small><small>橡膠工業同業 P/E 7.83／11.51／14.57 · n=7 · 信心較低</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>樣本不足 +0.0</b><small>熱度 0 / 信心 0</small><small class="risk">情緒樣本不足</small></td>
+          <td class="news"><span>近期沒有通過股票語境篩選的新聞</span></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=9904" target="_blank" rel="noreferrer"><strong>9904</strong> 寶成</a><small class="status status-wait">等待拉回 · 100 分</small><small>等拉回，不追價</small></td>
+          <td><b>+6.0</b><small>法人 +45,653 張 / 5 天</small></td>
+          <td><b class="status status-ready">命中 · 92</b><small>站上月線；中期均線偏多；法人籌碼偏多；留意動能位置非最佳</small></td>
+          <td><b>+895 張</b><small>近3日 +28,512 / 連續 +9 日</small></td>
+          <td><b>72.3</b><small>相對大盤 +5.6%</small></td>
+          <td><b>量比 1.30</b><small>確認分 +4.3</small><small class="risk">價格、量能與籌碼未見明顯弱項</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>+1.36 pp</b><small>1000張 +1.31 pp</small></td>
+          <td><span class="positive">單月營收年增 +10.4%；2026 Q2 累計 EPS 2.37</span><small class="risk">累計營收年增 -0.5%；2026 Q2 累計營益率 2.3%</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=9904" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 59.44</b><small>估值帶 50.67–69.58</small><small>現價 26.40 · 低於估值帶 · 距基準 +125.2%</small><small>2026 Q2 累計 EPS 2.37 → 年化 4.74</small><small>運動休閒同業 P/E 10.69／12.54／14.68 · n=19 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>偏空 -29.7</b><small>熱度 52 / 信心 30</small><small class="risk">法人布局、市場悲觀</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFBwcjNZQjV2U3RnX3FscEFSOEN4bnZhNlVfay1JU2Nhd0JNVFkwYWVreHFlYm9NbUtJWHBNeEtOX19PVXNWOGVfZWM3TlJGbm81MmY3Zl9wVF95cVhSV0t2SF85WUpBbGg3aFE?oc=5" target="_blank" rel="noreferrer">台股崩跌融資洗乾淨了？分析師揭「止穩3關鍵訊號」 點名台泥、寶成、遠東銀…10檔「黃金右下角」首選股- 上市櫃<small>旺得富理財網 · 10/19</small></a><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTFBWM0s2cVo1Nm9BNFFwY2xWVVZEYlQtU2kxSUJiUUNqcXBfNi1oeEFQMzBET1M1Z2drR256MDBPTFVwLXBkTlJqa3NqTk1KSWM0MXZFcmduSzg?oc=5" target="_blank" rel="noreferrer">寶成(9904) 10/19 三大法人買賣超<small>CMoney · 10/19</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=4927" target="_blank" rel="noreferrer"><strong>4927</strong> 泰鼎-KY</a><small class="status status-wait">等待拉回 · 100 分</small><small>等拉回，不追價</small></td>
+          <td><b>+5.3</b><small>法人 +9,172 張 / 4 天</small></td>
+          <td><b class="status status-wait">接近 · 81</b><small>站上月線；中期均線偏多；法人籌碼偏多；留意基本面偏弱、動能位置非最佳</small></td>
+          <td><b>+335 張</b><small>近3日 +4,903 / 連續 +1 日</small></td>
+          <td><b>77.7</b><small>相對大盤 +36.1%</small></td>
+          <td><b>量比 1.73</b><small>確認分 +6.1</small><small class="risk">價格、量能與籌碼未見明顯弱項</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>+9.01 pp</b><small>1000張 +8.22 pp</small></td>
+          <td><span class="positive">單月營收年增 +72.8%；累計營收年增 +9.7%</span><small class="risk">2026 Q2 累計 EPS -5.46；2026 Q2 累計營益率 -22.8%</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=4927" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>不適用</b><small>年化 EPS 非正數，不適合使用本益比估值</small></td>
+          <td><b>偏多 +19.8</b><small>熱度 44 / 信心 20</small><small class="risk">情籌混合</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE5lYnp5YVVHWmFIZENYbjZTUjkwbDVvQzQyd1dJMHJoaWZScm55NGY5MUpFTDNqekxGQ0hQcGFfcUFLbTN5MHRFRXdXLTZXR0F1YjRvY2xlQ24?oc=5" target="_blank" rel="noreferrer">4927 泰鼎-KY - 今晚21:00LIVE直播！60元頸線淬鍊大底『北伐二部曲』 - 股市爆料同學會<small>CMoney · 10/19</small></a><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxQTkpUc2NvNjlaVzFzbHk1ZTRLMDRieEp6UndCRmdnMDRDMkNMcllyQ1NiRm1OQW9wTlFvNTFmMi1HejUwT1ptbDdkTUhJeVgxYVRBWHkxNzJYbXFjbm9xRFFOdTRVUXhwSkowYWtOZFJGMGRKRlVWQW1oNEN4dDB0Ylk0N3N4S1lLcmRxd2Fn?oc=5" target="_blank" rel="noreferrer">【11:23 即時新聞】泰鼎-KY(4927)盤中小漲，延續營收創高題材<small>CMoney投資網誌 · 10/19</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=4904" target="_blank" rel="noreferrer"><strong>4904</strong> 遠傳</a><small class="status status-wait">等待拉回 · 100 分</small><small>等拉回，不追價</small></td>
+          <td><b>+4.4</b><small>法人 +15,267 張 / 5 天</small></td>
+          <td><b class="status status-ready">命中 · 96</b><small>站上月線；中期均線偏多；法人籌碼偏多；留意動能位置非最佳</small></td>
+          <td><b>+6,060 張</b><small>近3日 +10,724 / 連續 +9 日</small></td>
+          <td><b>70.6</b><small>相對大盤 +5.0%</small></td>
+          <td><b>量比 1.53</b><small>確認分 +5.8</small><small class="risk">價格、量能與籌碼未見明顯弱項</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>+0.24 pp</b><small>1000張 +0.25 pp</small></td>
+          <td><span class="positive">單月營收年增 +8.7%；累計營收年增 +11.0%；2026 Q2 累計 EPS 2.14</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=4904" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 96.60</b><small>估值帶 62.23–184.4</small><small>現價 112.5 · 估值帶內 · 距基準 -14.1%</small><small>2026 Q2 累計 EPS 2.14 → 年化 4.28</small><small>通信網路同業 P/E 14.54／22.57／43.09 · n=59 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>中性分歧 +0.0</b><small>熱度 52 / 信心 30</small><small class="risk">情籌混合</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE9tZkM5VExWa0d2YV83MHVENV94UDJ1bWFkSUtieEFNQ2d5eFdIN2R3V2tFMkVBWmdIazNFdGM2Nmt0c29QY2FTSDhUanVBWS1Ucng4Y0VQODBYZ2VHcXczcVhXNXNDdGF2Y0E?oc=5" target="_blank" rel="noreferrer">台股跌跌不休中華電、台灣大…電信3雄反創新高回測100萬存遠傳或0050？少賺600萬捶心肝- 基金<small>旺得富理財網 · 10/19</small></a><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE1EY2oyQmdnUUpqT29sTGFEbnNuUHdYd2JFQldEb0t6d1FsUVpEbWRfenZLbFdxYk4ySDBoUG1lOEE2MTJWelNuX3BiOHo4YjR5QVRzTmFUMXQ?oc=5" target="_blank" rel="noreferrer">4904 遠傳- 【00985A】10/19 操作日報｜棄守防禦股，急拉景碩與華邦電- 股市爆料同學會<small>CMoney · 10/19</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=4938" target="_blank" rel="noreferrer"><strong>4938</strong> 和碩</a><small class="status status-wait">等待拉回 · 92 分</small><small>等拉回，不追價</small></td>
+          <td><b>+5.0</b><small>法人 +27,277 張 / 4 天</small></td>
+          <td><b class="status status-ready">命中 · 89</b><small>站上月線；中期均線偏多；法人籌碼偏多；留意法人買盤未加速、動能位置非最佳</small></td>
+          <td><b>-21,624 張</b><small>近3日 +10,126 / 連續 +2 日</small></td>
+          <td><b>70.5</b><small>相對大盤 +12.5%</small></td>
+          <td><b>量比 1.01</b><small>確認分 +2.5</small><small class="risk">法人買盤減速</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>+0.60 pp</b><small>1000張 +0.72 pp</small></td>
+          <td><span class="positive">單月營收年增 +86.9%；累計營收年增 +13.8%；2026 Q2 累計 EPS 2.26</span><small class="risk">2026 Q2 累計營益率 1.4%</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=4938" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 79.42</b><small>估值帶 56.41–111.5</small><small>現價 102.0 · 估值帶內 · 距基準 -22.1%</small><small>2026 Q2 累計 EPS 2.26 → 年化 4.52</small><small>電腦及週邊同業 P/E 12.48／17.57／24.66 · n=80 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>中性分歧 +0.0</b><small>熱度 52 / 信心 30</small><small class="risk">情籌混合</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE9IWkI5bWdaM2RNTXZGeEdmc1lwaUZNN2R5dG9WZFBnNDhIZlozWXZQRVVLckh2TzU2VVFiSktRbzNYSmc4clpiYkJUZ1E2cE9XSlZNem5EaVVVd9IBX0FVX3lxTE5namxwV3MzTlVobTNLcURIbndlY0ZJLWx1NnMxY0xpQjFfMHROYTZvb1pMZGRKNzc1VjRpLTBKZzQ1MHAzWlBfYkpwUmlnQTFPTElpNUVJd01IczB1cWxZ?oc=5" target="_blank" rel="noreferrer">和碩績優爆量漲停！AI 伺服器、SSD 布局受矚 還有小金雞月底掛牌<small>經濟日報 · 10/17</small></a><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE5DZzhhOFRDS1dxeUlENnJ2U1phdzZ6US1ma2pVZnRFZUZtUG1icWxNaWtJdm9EajdRb1J3VE9YWGNNQk92VDBrT1IzQVBGbEZmVkp5WVhDOUE?oc=5" target="_blank" rel="noreferrer">TWA00 加權指數- AI需求爆發！大量與和碩第三季營收齊創新高- 股市爆料同學會<small>CMoney · 10/18</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr></tbody></table></div>
+      </section>
+    
+      <section class="band" id="bad_price_up">
+        <div class="section-head"><div><span class="eyebrow">03</span><h2>籌碼差 / 股價上漲</h2></div><p>可能是事件行情或軋空；沒有籌碼改善前避免追高。</p></div>
+        
+    <div class="table-wrap"><table>
+      <thead><tr><th>股票 / 確認狀態</th><th>每日法人分</th><th>浦男式近似</th><th>法人加速度</th><th>RSI / 相對強弱</th><th>量價確認</th><th>融資融券</th><th>每週集保確認</th><th>基本面</th><th>EPS × 同業 P/E 估值</th><th>情緒 / 情籌</th><th>近期消息</th><th>論壇討論</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=5498" target="_blank" rel="noreferrer"><strong>5498</strong> 凱崴</a><small class="status status-risk">風險警示 · 44 分</small><small>背離警戒，避免追高</small></td>
+          <td><b>-4.5</b><small>法人 -2,459 張 / 2 天</small></td>
+          <td><b class="status status-risk">未命中 · 55</b><small>站上月線；中期均線偏多；明顯強於大盤；留意法人籌碼偏弱、法人買盤未加速</small></td>
+          <td><b>-3,077 張</b><small>近3日 -2,796 / 連續 -3 日</small></td>
+          <td><b>78.2</b><small>相對大盤 +27.2%</small></td>
+          <td><b>量比 8.91</b><small>確認分 +0.8</small><small class="risk">法人買盤減速；融資單日增幅偏高</small></td>
+          <td><b>+11.6%</b><small>融資 +632 張 / 融券 +62 張</small></td>
+          <td><b>+0.17 pp</b><small>1000張 -0.57 pp</small></td>
+          <td><span class="positive">單月營收年增 +78.7%；累計營收年增 +71.8%；2026 Q2 累計 EPS 0.18</span><small class="risk">2026 Q2 累計營益率 6.4%</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=5498" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 9.80</b><small>估值帶 6.44–16.15</small><small>現價 65.70 · 高於估值帶 · 距基準 -85.1%</small><small>2026 Q2 累計 EPS 0.18 → 年化 0.36</small><small>電子零組件同業 P/E 17.90／27.21／44.87 · n=149 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.tpex.org.tw/openapi/v1/tpex_mainboard_peratio_analysis" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>偏多 +29.7</b><small>熱度 52 / 信心 30</small><small class="risk">熱門但法人撤退</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMitwRBVV95cUxPRi10TWdCd25UMmxReUQyM3AxQ1RoTTFicUdNdnRVLVVMcHowY3F0b2d2OGdCX0pQckNFSzRSUGZLNkZ0ZXZRNzJ5WWZROE5ObUNBY2hQejNMU2pzUGxIMWhoc0RRU05tY0EtdHYzQl9qZDMyR0VkT0RHZ095aXdEZWFzQUxrUVhmekhYa0hwZGNZa2M3ZlNxUENHenNSbU9KN0FnUUkxekN6bHNYa1VwVGJZcE5OZHkySEFoVF9qdDNHbnVhX2xzQUZkVFNXOFNsVWZJVU42YWtYRlZNSEkzVUtLRVZaOXJTbjJnRnlEZERzRUVCUHBjemlvLU0zaGxZTGhtWERtTTdadVptYmdYeS01eTZJczllNDJfM0NBdnF2eTIxWjJ4T0dQb09lOC1tVHZDUGEwMnIzOWF0bWF3cmhaSG5iR1ZRV25tejFFbFRWcjhsb1FNMzFnTXN2VUdGel8zb3BNS08yMEcyRFdqY1lXNnNVQWh5Q0pFN29zdmlFaTVCamJ2N05KZFlaMkd1MGJnU3lNR095NVd1SmxJb2twTGFYNGNXV1VlTi1QYm5aMGRrMGR6Z1ZlMGE5SG8wdmlMRXZiME9SOHBkYm5GNElqWERXdFdma0E3YWhVUzJIR1BFTWRha1BxeVZvUW54NW44cGNSWmJEckYxczZyUUhTd245QTNBUHBJTXpEWU9ydHdrdkY1TnBaOG43WVlhMzBsU1lXdTVid1NUQ21BZ3VYOThHZmM?oc=5" target="_blank" rel="noreferrer">今日漲停股｜台股開低收斂跌幅，電子零組件與PCB族群逆勢亮眼，富喬、凱崴、科嶠強勢漲停 1019<small>永豐金證券 · 10/19</small></a><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTFBSYVhJMkx6dXdBYXk3X1Q0SlMtNVd1aFV6MDA2a1RJcGZyWXQtTEJvVXEtNjhXN1d2dGZWSGl1bVBfSHdhZmNrR3AyYUtQclNWMVNodDQ5NVg?oc=5" target="_blank" rel="noreferrer">5498 凱崴- 【今日盤後速報】富喬泰國新廠動工！玻纖布與PCB材料同步轉強，誰有營收支撐？ - 股市爆料同學會<small>CMoney · 10/19</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=6532" target="_blank" rel="noreferrer"><strong>6532</strong> 瑞耘</a><small class="status status-risk">風險警示 · 48 分</small><small>背離警戒，避免追高</small></td>
+          <td><b>-6.5</b><small>法人 -1,742 張 / 0 天</small></td>
+          <td><b class="status status-wait">接近 · 75</b><small>站上月線；中期均線偏多；明顯強於大盤；留意法人籌碼偏弱、法人買盤未加速</small></td>
+          <td><b>-1,218 張</b><small>近3日 -1,424 / 連續 -5 日</small></td>
+          <td><b>65.6</b><small>相對大盤 +32.7%</small></td>
+          <td><b>量比 1.59</b><small>確認分 +2.5</small><small class="risk">法人買盤減速</small></td>
+          <td><b>+4.7%</b><small>融資 +246 張 / 融券 +7 張</small></td>
+          <td><b>+3.93 pp</b><small>1000張 +0.00 pp</small></td>
+          <td><span class="positive">單月營收年增 +60.6%；累計營收年增 +19.5%；2026 Q2 累計 EPS 2.01</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=6532" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 104.9</b><small>估值帶 67.98–182.6</small><small>現價 124.0 · 估值帶內 · 距基準 -15.4%</small><small>2026 Q2 累計 EPS 2.01 → 年化 4.02</small><small>半導體同業 P/E 16.91／26.09／45.42 · n=148 · 信心較低</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估；年化 EPS 為交易所近四季 EPS 的 0.50 倍，需保守解讀</small><a class="source-link" href="https://www.tpex.org.tw/openapi/v1/tpex_mainboard_peratio_analysis" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>偏多 +29.7</b><small>熱度 52 / 信心 30</small><small class="risk">熱門但法人撤退</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTFA0a0cyaXNvX19tZXpoWHEtOUU3SmRhc3l6WjFLMXViN0Nqa2hvWEpXOFNxYnNMUWkwUjZUQXhzUzJKRS1NY2d3VklXYw?oc=5" target="_blank" rel="noreferrer">半導體全倒下！「這檔」訂單旺到2028年今再跌2.46% 聖暉*、志聖挫逾4%、瑞耘跌4.88%為最多<small>FTNN 新聞網 · 10/19</small></a><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxNWnJ2aHM0akhmMVdiTnhCTE5xZktDVHlCaVdYTTVHOHhuZ1Ztd3ZUX09oSFRvbUR1RERKSnN6bUNIUzlvd3ZKdW1DX205SUpiVzNaYVdwWklwWkZuMEVHNWhZUm5kcXdaVzJITFBsVEs3TGd6LXBCdk5IS2tJVXdnQ3pQcE9meHVIU0FJZTJn?oc=5" target="_blank" rel="noreferrer">【11:59 即時新聞】瑞耘(6532)盤中走強，市場聚焦法人籌碼變化<small>CMoney投資網誌 · 10/19</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=4960" target="_blank" rel="noreferrer"><strong>4960</strong> 誠美材</a><small class="status status-risk">風險警示 · 34 分</small><small>背離警戒，避免追高</small></td>
+          <td><b>-3.2</b><small>法人 -2,596 張 / 1 天</small></td>
+          <td><b class="status status-risk">未命中 · 51</b><small>站上月線；中期均線偏多；明顯強於大盤；留意法人籌碼偏弱、法人買盤未加速</small></td>
+          <td><b>-3,515 張</b><small>近3日 -2,843 / 連續 -3 日</small></td>
+          <td><b>75.1</b><small>相對大盤 +36.9%</small></td>
+          <td><b>量比 2.82</b><small>確認分 +1.8</small><small class="risk">法人買盤減速</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>-1.25 pp</b><small>1000張 -0.89 pp</small></td>
+          <td><span class="positive">尚無明確成長訊號</span><small class="risk">單月營收年增 -14.9%；累計營收年增 -10.3%；2026 Q2 累計 EPS -0.60</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=4960" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>不適用</b><small>年化 EPS 非正數，不適合使用本益比估值</small></td>
+          <td><b>偏空 -29.7</b><small>熱度 52 / 信心 30</small><small class="risk">情籌雙弱</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE5JSHdKMERfdEt6Q3FkTjh1TzFKVU94WXNYN3EwaFpuYWJ0VW5TVUdJQ1oyTTRWQndEUUVyZldrWUdoblNmYXJ3Q09PMnNHN3VmcFJkSWh2UC1qUQ?oc=5" target="_blank" rel="noreferrer">今日最夯股／誠美材量增衝漲停 市場看到什麼利多？ | 市場焦點 | 證券<small>經濟日報 · 10/19</small></a><a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTE1WSWc4M2xKY19rbXV5X1VOMWdUdWw5NDhaWTF0NHBtX1dHNUVMa3ZaRnFXTFR5MXZGdWpMcWZKakphaUlQOU9hOGdobw?oc=5" target="_blank" rel="noreferrer">光電股綠中帶紅！「這光學廠」重摔至跌停、玉晶光跌3.69% 誠美材逆風亮紅燈、冠西電噴近7%<small>FTNN 新聞網 · 10/19</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=6153" target="_blank" rel="noreferrer"><strong>6153</strong> 嘉聯益</a><small class="status status-risk">風險警示 · 32 分</small><small>背離警戒，避免追高</small></td>
+          <td><b>-6.2</b><small>法人 -6,325 張 / 0 天</small></td>
+          <td><b class="status status-wait">接近 · 60</b><small>站上月線；中期均線偏多；明顯強於大盤；留意法人籌碼偏弱、法人買盤未加速</small></td>
+          <td><b>-6,096 張</b><small>近3日 -5,895 / 連續 -5 日</small></td>
+          <td><b>59.6</b><small>相對大盤 +6.3%</small></td>
+          <td><b>量比 1.99</b><small>確認分 +2.1</small><small class="risk">法人買盤減速</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>+0.36 pp</b><small>1000張 +0.28 pp</small></td>
+          <td><span class="positive">單月營收年增 +0.8%；累計營收年增 +4.7%</span><small class="risk">2026 Q2 累計 EPS -0.86；2026 Q2 累計營益率 -24.2%</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=6153" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>不適用</b><small>年化 EPS 非正數，不適合使用本益比估值</small></td>
+          <td><b>樣本不足 +0.0</b><small>熱度 31 / 信心 10</small><small class="risk">情緒樣本不足</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxOM0xjSmlscllpV1pNdWg1S2ZkT1d3TzFmajNLMU9ibDd2aEZrMWJZUk8xNjEtNDd4ZUZ1S2Jqa21vb0VmdlBtQjN1YWF4VWh3eW1PeWhnbHRRNHZXdVRWbGZYd2M2NkYxTEFERUxXM2JpVXBwYk5MRVkyWkdkcW4wNmtqM0o2dTE0VmIxMFFB?oc=5" target="_blank" rel="noreferrer">【09:35 即時新聞】嘉聯益(6153)亮燈漲停，蘋果折疊機供應鏈題材受關注<small>CMoney投資網誌 · 10/16</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=2312" target="_blank" rel="noreferrer"><strong>2312</strong> 金寶</a><small class="status status-risk">風險警示 · 42 分</small><small>背離警戒，避免追高</small></td>
+          <td><b>-3.8</b><small>法人 -11,520 張 / 2 天</small></td>
+          <td><b class="status status-risk">未命中 · 55</b><small>站上月線；相對大盤偏強；基本面有支撐；留意中期均線未翻多、法人籌碼偏弱</small></td>
+          <td><b>-34,330 張</b><small>近3日 -21,393 / 連續 -1 日</small></td>
+          <td><b>57.5</b><small>相對大盤 +1.4%</small></td>
+          <td><b>量比 2.87</b><small>確認分 +0.1</small><small class="risk">20日線低於60日線；法人買盤減速</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>+0.23 pp</b><small>1000張 +0.19 pp</small></td>
+          <td><span class="positive">單月營收年增 +13.4%；累計營收年增 +5.1%；2026 Q2 累計 EPS 0.70</span><small class="risk">2026 Q2 累計營益率 2.8%</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=2312" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 28.83</b><small>估值帶 20.36–47.49</small><small>現價 32.05 · 估值帶內 · 距基準 -10.1%</small><small>2026 Q2 累計 EPS 0.70 → 年化 1.40</small><small>其他電子同業 P/E 14.54／20.59／33.92 · n=66 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>偏多 +29.7</b><small>熱度 52 / 信心 30</small><small class="risk">熱門但法人撤退</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE9kMFR1SzRjRmZod3E2SDR2TXVqZjRYQ1pFWng1ajU3dnkyVFVsRlQ1Qi1YR3RSVEg0dDFiZnFTc3lkbmU3cS1hSXJfR2xhdmJuVWZBc1VtSmxEc2J0cVgw0gFkQVVfeXFMT055bC0wZ1ROT2EyTG9MYjIyWU5tTzJjOUpYUmxRN2puM2Rhd1NUbUhlb2xRYVRxS3dzSWlZcEdMMFYzNGRVU2gwNE1yR0NfZlp2Zjc0MU56RmcyN0tpSFVnZF9xVg?oc=5" target="_blank" rel="noreferrer">焦點股》金寶：營收創單月新高 帶量上攻<small>自由財經 · 10/14</small></a><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTFB1MHgtNW84RlpxR213SjhRellOLU03VTZGcGhaeGtmckJDa0hFRjdJaDJIUVVrX3RRY2FPMkp1SFB3NVN0ckZ5eXNhaUtOUmxqbFhaMGxiU3k?oc=5" target="_blank" rel="noreferrer">9105 泰金寶-DR - 今日外資買超第三名！！ 資料來源：https://jelly... - 股市爆料同學會<small>CMoney · 10/19</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr></tbody></table></div>
+      </section>
+    
+      <section class="band" id="bad_price_down">
+        <div class="section-head"><div><span class="eyebrow">04</span><h2>籌碼差 / 股價下跌</h2></div><p>籌碼與價格同弱，原則上迴避，等待法人與大戶同時回補。</p></div>
+        
+    <div class="table-wrap"><table>
+      <thead><tr><th>股票 / 確認狀態</th><th>每日法人分</th><th>浦男式近似</th><th>法人加速度</th><th>RSI / 相對強弱</th><th>量價確認</th><th>融資融券</th><th>每週集保確認</th><th>基本面</th><th>EPS × 同業 P/E 估值</th><th>情緒 / 情籌</th><th>近期消息</th><th>論壇討論</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=2305" target="_blank" rel="noreferrer"><strong>2305</strong> 全友</a><small class="status status-risk">風險警示 · 56 分</small><small>迴避，等待籌碼翻正</small></td>
+          <td><b>-4.8</b><small>法人 -6,872 張 / 1 天</small></td>
+          <td><b class="status status-wait">接近 · 68</b><small>中期均線偏多；法人買盤加速；明顯強於大盤；留意未站月線、法人籌碼偏弱</small></td>
+          <td><b>+7,800 張</b><small>近3日 -325 / 連續 -2 日</small></td>
+          <td><b>42.1</b><small>相對大盤 +10.4%</small></td>
+          <td><b>量比 0.95</b><small>確認分 +4.5</small><small class="risk">收盤跌破20日線</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>-4.41 pp</b><small>1000張 -1.37 pp</small></td>
+          <td><span class="positive">單月營收年增 +212.8%；累計營收年增 +125.1%；2026 Q2 累計 EPS 0.51</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=2305" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 17.54</b><small>估值帶 12.59–23.48</small><small>現價 55.60 · 高於估值帶 · 距基準 -68.5%</small><small>2026 Q2 累計 EPS 0.51 → 年化 1.02</small><small>電腦及週邊同業 P/E 12.34／17.20／23.02 · n=79 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>樣本不足 +0.0</b><small>熱度 0 / 信心 0</small><small class="risk">情緒樣本不足</small></td>
+          <td class="news"><span>近期沒有通過股票語境篩選的新聞</span></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=6488" target="_blank" rel="noreferrer"><strong>6488</strong> 環球晶</a><small class="status status-risk">風險警示 · 0 分</small><small>迴避，等待籌碼翻正</small></td>
+          <td><b>-6.5</b><small>法人 -11,422 張 / 0 天</small></td>
+          <td><b class="status status-risk">未命中 · 26</b><small>中期均線偏多；流動性足夠；留意未站月線、法人籌碼偏弱</small></td>
+          <td><b>-2,751 張</b><small>近3日 -7,072 / 連續 -5 日</small></td>
+          <td><b>44.8</b><small>相對大盤 -8.0%</small></td>
+          <td><b>量比 0.86</b><small>確認分 -5.8</small><small class="risk">收盤跌破20日線；近20日弱於大盤；法人買盤減速</small></td>
+          <td><b>-0.1%</b><small>融資 -8 張 / 融券 -13 張</small></td>
+          <td><b>+0.30 pp</b><small>1000張 +1.02 pp</small></td>
+          <td><span class="positive">2026 Q2 累計 EPS 11.87；2026 Q2 累計營益率 9.9%</span><small class="risk">單月營收年增 -13.1%；累計營收年增 -4.4%</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=6488" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 616.3</b><small>估值帶 400.5–1,078</small><small>現價 882.0 · 估值帶內 · 距基準 -30.1%</small><small>2026 Q2 累計 EPS 11.87 → 年化 23.74</small><small>半導體同業 P/E 16.87／25.96／45.42 · n=148 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.tpex.org.tw/openapi/v1/tpex_mainboard_peratio_analysis" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>中性分歧 +0.0</b><small>熱度 52 / 信心 30</small><small class="risk">情籌混合</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE4xZFpBdklENGlrd21oX3RoWkppQ0p1c0ZrVTBrVkNrWEY2cENtdzdsNXdVZV9qV012Vi1RUWlkTEVEQW0tUElVZV9vSWlYSlUxYmd0Z2dnOFI?oc=5" target="_blank" rel="noreferrer">5483 中美晶- 《 環球晶打國際盃台勝科拚籌碼！五年股價比值為何失衡？》 - 股市爆料同學會<small>CMoney · 10/16</small></a><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTFA2RFFGQ29yOUxXVndEZ3FxQjJPMEUwdDRfSnA4LWVkT3M4SGFvUWFfb2trZkgzazl3ZTlLRGNwSmpXTGRwbExyMFBIOHZVVEtmaU1zM2tqUkk?oc=5" target="_blank" rel="noreferrer">6488 環球晶- AI - 股市爆料同學會<small>CMoney · 10/17</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=2408" target="_blank" rel="noreferrer"><strong>2408</strong> 南亞科</a><small class="status status-risk">風險警示 · 25 分</small><small>迴避，等待籌碼翻正</small></td>
+          <td><b>-5.8</b><small>法人 -107,360 張 / 0 天</small></td>
+          <td><b class="status status-risk">未命中 · 42</b><small>中期均線偏多；法人買盤加速；基本面有支撐；留意未站月線、法人籌碼偏弱</small></td>
+          <td><b>+36,939 張</b><small>近3日 -36,390 / 連續 -6 日</small></td>
+          <td><b>30.6</b><small>相對大盤 -13.6%</small></td>
+          <td><b>量比 0.87</b><small>確認分 -1.8</small><small class="risk">收盤跌破20日線；近20日弱於大盤</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>-1.24 pp</b><small>1000張 -1.16 pp</small></td>
+          <td><span class="positive">單月營收年增 +576.6%；累計營收年增 +626.9%；2026 Q2 累計 EPS 23.38</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=2408" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 1,220</b><small>估值帶 788.8–2,124</small><small>現價 436.0 · 低於估值帶 · 距基準 +179.8%</small><small>2026 Q2 累計 EPS 23.38 → 年化 46.76</small><small>半導體同業 P/E 16.87／26.09／45.42 · n=148 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>偏空 -32.5</b><small>熱度 89 / 信心 67</small><small class="risk">情籌雙弱</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMi5gRBVV95cUxQZkd5QVRnWnI1R1BtblVOWHZMbWRueVNXYmU2d3dWb3NqSFRVakVTdWtBSzNKV1NEY1dQQk82TGNUQUJJN3dqaUlwRzRRazZwQkFzTVZ6eExjSTVFM2JEcFZ6NG5wQzN5NHZTNDB0am1yLWoyejhuOWZOODJ5eUpmME5icFVZMUdlQ2ZLRHZ1TnRqaXppUGZfZmtoM0o2WkI4MWw0RjE0ejN6X3ZjNkZMQkc5Ym9LWXIzNDcxRnh0UzhURkttaTVhc2VXR0xVRkkyMmxRNEFTMmJZNkVNVFdVQ3g4M29oZm5EZUY0cFNTY29VTF96a3BzaVotVGQyLV9GT0c1eTdDZnRFb1NtWGpNVWtZSVFFLXB3QU9pc0dCcHV1Rlc1bVVwUjhvX19LZVNDRVdvZVBNOTkyVGhIRUhrLUFxbE5CNEpqbThORlFQLXJScUpSMDBWcGRHMWt1TUthekM1TnZBaHhGMGNuMWYxSXZ4TzJQa3VTdHVkOUUtRGlvUXhfSzhmalB1Q2JvMy1DczE0OFB3Ymh5SmFCaE5OYl9lR0JoRzVhU3RGcTFXMmxBd0l1OUt3VWcwTHc1Q2RKWGdzTDVTMUhKOEVhR0pKMURpakoyLTBPNk5uZGdRVmQzZDVFUVBCbWxXNHIyWEVNUlpvQzdxMzhQYmh3RG5WN3o2ZW9ROGlpbWFzYXlUNEtQVkpRU3JGWXZ6bDJPcXNWdU1FVkhMaksxT2JiUnU0Rlo0Tlg4WFdOcDZqQkdOUVdnS3pqcmc1TXRYdXQwYjdveGhwdE10TlZNbGN3MERPT1NMaUNOdw?oc=5" target="_blank" rel="noreferrer">【零股排行榜】 盤中零股成交量TOP 20｜0050 元大台灣50、2330 台積電、2408 南亞科、009816 凱基台灣TOP50、00406A 主動中信台灣收益(1013)｜豐雲學堂2026 年 10 月<small>永豐金證券 · 10/19</small></a><a href="https://news.google.com/rss/articles/CBMib0FVX3lxTE1sUVdiUHdrdGpxeXlITGVvOGo4SDRPcTM5bDZQQTVrZGVoZTBuUmJpUHJ4ekVPaEhoWWhVd3dZSXNFS2tpdko3UlluRE90cF9TWjNmZ2d5YVNDeEswdU1ieHl6azRWQ2tHdXVKY1ZuWQ?oc=5" target="_blank" rel="noreferrer">外資9天狂砍7,585億、央行罕見出手！台積電急拉救盤，廣達、華邦電、南亞科臉綠<small>理財周刊 · 10/19</small></a></td>
+          <td class="news"><a href="https://www.ptt.cc/bbs/Stock/M.1792144757.A.429.html" target="_blank" rel="noreferrer">[情報] 2323 中環 買聯亞,國巨,光聖,賣南亞科賠<small>PTT Stock · 10-16 · 38 留言</small></a></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=2467" target="_blank" rel="noreferrer"><strong>2467</strong> 志聖</a><small class="status status-risk">風險警示 · 5 分</small><small>迴避，等待籌碼翻正</small></td>
+          <td><b>-5.8</b><small>法人 -1,893 張 / 0 天</small></td>
+          <td><b class="status status-risk">未命中 · 31</b><small>基本面有支撐；流動性足夠；留意未站月線、中期均線未翻多</small></td>
+          <td><b>-1,112 張</b><small>近3日 -989 / 連續 -5 日</small></td>
+          <td><b>41.5</b><small>相對大盤 -7.5%</small></td>
+          <td><b>量比 0.89</b><small>確認分 -5.6</small><small class="risk">收盤跌破20日線；20日線低於60日線；近20日弱於大盤；法人買盤減速</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>-0.98 pp</b><small>1000張 -1.72 pp</small></td>
+          <td><span class="positive">單月營收年增 +90.6%；累計營收年增 +84.2%；2026 Q2 累計 EPS 7.16</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=2467" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 385.4</b><small>估值帶 255.6–640.1</small><small>現價 491.0 · 估值帶內 · 距基準 -21.5%</small><small>2026 Q2 累計 EPS 7.16 → 年化 14.32</small><small>電子零組件同業 P/E 17.85／26.91／44.70 · n=148 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>中性分歧 +0.0</b><small>熱度 44 / 信心 20</small><small class="risk">情籌混合</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE5zUktuTEpwZFcwNnQ4a190SWJGdWdlZW04Ulh5RVZJLUZrOVdPX1J5S0tZeFktZ2dQRHAyZUhid2F6eFRpOXhpcXpNS0NwbmxHWG5HcUlzZGo?oc=5" target="_blank" rel="noreferrer">2467 志聖- AI 推升高階載板設備需求志聖攜G2C+聯盟 TPCA 展新品- 股市爆料同學會<small>CMoney · 10/19</small></a><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE9MOG9OSTVwVXA1VXVPRmRXeFVIOGo2OC1uTVZHMUtvN0dCN0hUaGNFQWcxbGJYd2k2WjZ1MENFd3c4WmZLdkdQbVN2WDJDa0xaUVlmUTU3Qno?oc=5" target="_blank" rel="noreferrer">2467 志聖- AI推升高階載板設備需求志聖攜G2C+聯盟亮相TPCA展 - 股市爆料同學會<small>CMoney · 10/19</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=3583" target="_blank" rel="noreferrer"><strong>3583</strong> 辛耘</a><small class="status status-risk">風險警示 · 2 分</small><small>迴避，等待籌碼翻正</small></td>
+          <td><b>-5.8</b><small>法人 -1,701 張 / 0 天</small></td>
+          <td><b class="status status-risk">未命中 · 31</b><small>基本面有支撐；流動性足夠；留意未站月線、中期均線未翻多</small></td>
+          <td><b>-417 張</b><small>近3日 -950 / 連續 -5 日</small></td>
+          <td><b>36.9</b><small>相對大盤 -7.6%</small></td>
+          <td><b>量比 0.82</b><small>確認分 -5.7</small><small class="risk">收盤跌破20日線；20日線低於60日線；近20日弱於大盤；法人買盤減速</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>-0.86 pp</b><small>1000張 -2.41 pp</small></td>
+          <td><span class="positive">單月營收年增 +2.8%；累計營收年增 +7.5%；2026 Q2 累計 EPS 9.16</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=3583" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 475.6</b><small>估值帶 309.1–832.1</small><small>現價 634.0 · 估值帶內 · 距基準 -25.0%</small><small>2026 Q2 累計 EPS 9.16 → 年化 18.32</small><small>半導體同業 P/E 16.87／25.96／45.42 · n=148 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>樣本不足 +0.0</b><small>熱度 0 / 信心 0</small><small class="risk">情緒樣本不足</small></td>
+          <td class="news"><span>近期沒有通過股票語境篩選的新聞</span></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=3450" target="_blank" rel="noreferrer"><strong>3450</strong> 聯鈞</a><small class="status status-risk">風險警示 · 23 分</small><small>迴避，等待籌碼翻正</small></td>
+          <td><b>-4.8</b><small>法人 -3,313 張 / 2 天</small></td>
+          <td><b class="status status-risk">未命中 · 42</b><small>中期均線偏多；法人買盤加速；基本面有支撐；留意未站月線、法人籌碼偏弱</small></td>
+          <td><b>+855 張</b><small>近3日 -1,545 / 連續 +1 日</small></td>
+          <td><b>34.4</b><small>相對大盤 -20.1%</small></td>
+          <td><b>量比 0.67</b><small>確認分 -1.8</small><small class="risk">收盤跌破20日線；近20日弱於大盤</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>-8.76 pp</b><small>1000張 -8.00 pp</small></td>
+          <td><span class="positive">單月營收年增 +99.8%；累計營收年增 +36.5%；2026 Q2 累計 EPS 2.78</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=3450" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 143.9</b><small>估值帶 93.69–248.7</small><small>現價 444.0 · 高於估值帶 · 距基準 -67.6%</small><small>2026 Q2 累計 EPS 2.78 → 年化 5.56</small><small>半導體同業 P/E 16.85／25.89／44.73 · n=147 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>樣本不足 +0.0</b><small>熱度 0 / 信心 0</small><small class="risk">情緒樣本不足</small></td>
+          <td class="news"><span>近期沒有通過股票語境篩選的新聞</span></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=6182" target="_blank" rel="noreferrer"><strong>6182</strong> 合晶</a><small class="status status-risk">風險警示 · 2 分</small><small>迴避，等待籌碼翻正</small></td>
+          <td><b>-4.3</b><small>法人 -5,719 張 / 2 天</small></td>
+          <td><b class="status status-risk">未命中 · 36</b><small>中期均線偏多；基本面有支撐；流動性足夠；留意未站月線、法人籌碼偏弱</small></td>
+          <td><b>-1,501 張</b><small>近3日 -4,732 / 連續 +1 日</small></td>
+          <td><b>40.6</b><small>相對大盤 -6.1%</small></td>
+          <td><b>量比 0.29</b><small>確認分 -5.9</small><small class="risk">收盤跌破20日線；近20日弱於大盤；成交量不足；法人買盤減速</small></td>
+          <td><b>-1.1%</b><small>融資 -706 張 / 融券 +754 張</small></td>
+          <td><b>-4.75 pp</b><small>1000張 -5.43 pp</small></td>
+          <td><span class="positive">單月營收年增 +13.5%；累計營收年增 +12.0%；2026 Q2 累計 EPS 0.06</span><small class="risk">2026 Q2 累計營益率 2.3%</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=6182" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 3.12</b><small>估值帶 2.02–5.40</small><small>現價 107.5 · 高於估值帶 · 距基準 -97.1%</small><small>2026 Q2 累計 EPS 0.06 → 年化 0.12</small><small>半導體同業 P/E 16.87／25.96／45.02 · n=148 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.tpex.org.tw/openapi/v1/tpex_mainboard_peratio_analysis" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>中性分歧 +0.0</b><small>熱度 52 / 信心 30</small><small class="risk">情籌混合</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE54anpoUk5GakhiMm9wUVlnSWNTYXV6Vk9JdmRFWGFoTmRmM3RSUExTRFpaSVFXcWtabWFuNWlIak1OTEFKMnZsUk1WTllFTm9JNUViZHBkc3k?oc=5" target="_blank" rel="noreferrer">6182 合晶 - 收平盤嗎😜 - 股市爆料同學會<small>CMoney · 10/19</small></a><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE4zZ3F5MHdSRERINXBsamxxdnJIWVlOS0xrWHZUanhvSTl2ZVpRS0xBMFZRaTJORW5XQS1pNnl1cTZqTDNtbTB6NElYMWM3LWhfdDF0ZWNqbm0?oc=5" target="_blank" rel="noreferrer">6182 合晶 - 10/19 外資 3,225張 投信 267張 自營商 -2... - 股市爆料同學會<small>CMoney · 10/19</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=2327" target="_blank" rel="noreferrer"><strong>2327</strong> 國巨*</a><small class="status status-risk">風險警示 · 21 分</small><small>迴避，等待籌碼翻正</small></td>
+          <td><b>-4.8</b><small>法人 -42,715 張 / 1 天</small></td>
+          <td><b class="status status-risk">未命中 · 50</b><small>中期均線偏多；量價健康；基本面有支撐；留意未站月線、法人籌碼偏弱</small></td>
+          <td><b>-28,438 張</b><small>近3日 -35,062 / 連續 -3 日</small></td>
+          <td><b>42.4</b><small>相對大盤 -2.5%</small></td>
+          <td><b>量比 1.05</b><small>確認分 -3.6</small><small class="risk">收盤跌破20日線；法人買盤減速</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>-0.37 pp</b><small>1000張 -0.92 pp</small></td>
+          <td><span class="positive">單月營收年增 +46.1%；累計營收年增 +36.3%；2026 Q2 累計 EPS 8.48</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=2327" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 456.4</b><small>估值帶 302.7–761.0</small><small>現價 534.0 · 估值帶內 · 距基準 -14.5%</small><small>2026 Q2 累計 EPS 8.48 → 年化 16.96</small><small>電子零組件同業 P/E 17.85／26.91／44.87 · n=148 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>偏多 +29.7</b><small>熱度 52 / 信心 30</small><small class="risk">熱門但法人撤退</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE9TQ3QyYkczYzVwc09PY2J0azVrOFQ0OUp1dmtHMUVRbG5SWjIwQVlmUEVfaXdCcER0MTlYbGpkbTQwM2UtRTFGSUFWUjh0NjFDNWtQYzEtbTI?oc=5" target="_blank" rel="noreferrer">2327 國巨* - 今天太多笨蛋搶便宜，明天會補跌☄️🐷 - 股市爆料同學會<small>CMoney · 10/19</small></a><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTFBGaEJrMzNCd09NN2QtdmJ6b19kaEMxZjFBWlVoRzVLUkg5QUFHU056WktLcHVQemJMbUpuRkZ5WWI5OEFUV3RBOENyaHc1UERJelVBNzV0LS0?oc=5" target="_blank" rel="noreferrer">2327 國巨* - 哲哲晚上60秒，心情💢應該不好受～～ 小暴龍分享被動元件... - 股市爆料同學會<small>CMoney · 10/19</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=6531" target="_blank" rel="noreferrer"><strong>6531</strong> 愛普*</a><small class="status status-risk">風險警示 · 26 分</small><small>迴避，等待籌碼翻正</small></td>
+          <td><b>-6.5</b><small>法人 -5,230 張 / 0 天</small></td>
+          <td><b class="status status-risk">未命中 · 47</b><small>中期均線偏多；法人買盤加速；量價健康；留意未站月線、法人籌碼偏弱</small></td>
+          <td><b>+2,638 張</b><small>近3日 -2,158 / 連續 -10 日</small></td>
+          <td><b>33.8</b><small>相對大盤 -15.6%</small></td>
+          <td><b>量比 1.06</b><small>確認分 -1.0</small><small class="risk">收盤跌破20日線；近20日弱於大盤</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>-0.72 pp</b><small>1000張 -0.79 pp</small></td>
+          <td><span class="positive">單月營收年增 +90.2%；累計營收年增 +106.0%；2026 Q2 累計 EPS 8.33</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=6531" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 432.5</b><small>估值帶 281.1–750.0</small><small>現價 821.0 · 高於估值帶 · 距基準 -47.3%</small><small>2026 Q2 累計 EPS 8.33 → 年化 16.66</small><small>半導體同業 P/E 16.87／25.96／45.02 · n=148 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>樣本不足 -9.9</b><small>熱度 31 / 信心 10</small><small class="risk">情緒樣本不足</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE5VbFpSdnlJbFFFMHk3V1FkemlxSEc4Y1pDdnRJQlByYVAzNXVZZlpzMVAydlhfZnVGaHMwVTBRQ2ZELTVHRWZ2cUlXTXo1OUtyZmVGNVpXTDk?oc=5" target="_blank" rel="noreferrer">6531 愛普* - 買賣超- 股市爆料同學會<small>CMoney · 10/19</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=2360" target="_blank" rel="noreferrer"><strong>2360</strong> 致茂</a><small class="status status-risk">風險警示 · 14 分</small><small>迴避，等待籌碼翻正</small></td>
+          <td><b>-4.6</b><small>法人 -2,985 張 / 0 天</small></td>
+          <td><b class="status status-risk">未命中 · 41</b><small>中期均線偏多；基本面有支撐；流動性足夠；留意未站月線、法人籌碼偏弱</small></td>
+          <td><b>-1,131 張</b><small>近3日 -2,114 / 連續 -7 日</small></td>
+          <td><b>36.9</b><small>相對大盤 -6.2%</small></td>
+          <td><b>量比 0.79</b><small>確認分 -5.3</small><small class="risk">收盤跌破20日線；近20日弱於大盤；法人買盤減速</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>+0.55 pp</b><small>1000張 -0.79 pp</small></td>
+          <td><span class="positive">單月營收年增 +206.5%；累計營收年增 +119.5%；2026 Q2 累計 EPS 21.27</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=2360" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 872.9</b><small>估值帶 618.1–1,354</small><small>現價 2,005 · 高於估值帶 · 距基準 -56.5%</small><small>2026 Q2 累計 EPS 21.27 → 年化 42.54</small><small>其他電子同業 P/E 14.53／20.52／31.83 · n=65 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>偏多 +29.7</b><small>熱度 52 / 信心 30</small><small class="risk">熱門但法人撤退</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE5keHlRVzd5VkVkRkZzeHcwemJfOHgwcEppVDJDZE54eHdxN2JnN2czUk1uYWVCSmN5WnVZR3VKcnRMYlVrbmh5cjZPZEgtTUQ4S0pxQXF1Y2E?oc=5" target="_blank" rel="noreferrer">2360 致茂- 大摩點名致茂、台達電、貿聯評等優於大盤- 股市爆料同學會<small>CMoney · 10/19</small></a><a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxOTTdRYjhEVnZ2Vk94SmpaaDZwSkkwUjJ6RHJjMGFVdElSUTJMWkhDN2FTVjktLTZyS1lUY0hGc213UHNhZWRtOC1hbVhzZjl0b3o1cjhNSDl4Tno2QVdIY0IxYjA0YWE3c01MeEcxWmlvb2dWbG1yS1JnMGJGZENsRnlzNTBkbmVxd2JDQmJ3?oc=5" target="_blank" rel="noreferrer">【11:48 即時新聞】致茂(2360)逆勢走強，AI測試設備與CPO題材受關注<small>CMoney投資網誌 · 10/19</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=3624" target="_blank" rel="noreferrer"><strong>3624</strong> 光頡</a><small class="status status-risk">風險警示 · 60 分</small><small>迴避，等待籌碼翻正</small></td>
+          <td><b>-4.5</b><small>法人 -4,512 張 / 2 天</small></td>
+          <td><b class="status status-wait">接近 · 62</b><small>中期均線偏多；法人買盤加速；明顯強於大盤；留意未站月線、法人籌碼偏弱</small></td>
+          <td><b>+11,403 張</b><small>近3日 +2,097 / 連續 +1 日</small></td>
+          <td><b>48.9</b><small>相對大盤 +10.1%</small></td>
+          <td><b>量比 0.41</b><small>確認分 +3.1</small><small class="risk">收盤跌破20日線；成交量不足</small></td>
+          <td><b>-1.6%</b><small>融資 -173 張 / 融券 -88 張</small></td>
+          <td><b>+2.24 pp</b><small>1000張 +3.00 pp</small></td>
+          <td><span class="positive">單月營收年增 +67.4%；累計營收年增 +34.8%；2026 Q2 累計 EPS 1.86</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=3624" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 100.1</b><small>估值帶 66.40–166.9</small><small>現價 138.0 · 估值帶內 · 距基準 -27.5%</small><small>2026 Q2 累計 EPS 1.86 → 年化 3.72</small><small>電子零組件同業 P/E 17.85／26.91／44.87 · n=148 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.tpex.org.tw/openapi/v1/tpex_mainboard_peratio_analysis" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>中性分歧 +0.0</b><small>熱度 52 / 信心 30</small><small class="risk">情籌混合</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE5oQnVvX1dBNHVNY0ctbHpHUDdlR21lRkVsQ2FGTy1YS09Uck1tNTYwbHVnSjBKR2NTb0xObnN5TVBTR0pURU0wWERrMjBWVTh0bDg5UHNvV2w1Uk10TVpVQWlNN3U?oc=5" target="_blank" rel="noreferrer">盤中速報 - 光頡(3624)股價殺至跌停，跌停價135.0元，成交4,024張<small>TradingView · 10/19</small></a><a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9HVXl0U21ZZ1N2cmhDSEkyU0ZtSm9XR05udE1ZRDBWZ3ZIYmlMbnkyLW1KYnpmOHFpOGZUSHJaXzhLV25aa05oMWxLbFlGLUJoOWRrenFB?oc=5" target="_blank" rel="noreferrer">光頡(3624)交期排到2027年下半年！預算達成率僅84%的一年，AI與漲價怎麼讓2026年翻盤？<small>LINE TODAY · 10/19</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=2308" target="_blank" rel="noreferrer"><strong>2308</strong> 台達電</a><small class="status status-risk">風險警示 · 14 分</small><small>迴避，等待籌碼翻正</small></td>
+          <td><b>-5.8</b><small>法人 -21,437 張 / 0 天</small></td>
+          <td><b class="status status-risk">未命中 · 35</b><small>中期均線偏多；基本面有支撐；流動性足夠；留意未站月線、法人籌碼偏弱</small></td>
+          <td><b>-1,810 張</b><small>近3日 -12,975 / 連續 -8 日</small></td>
+          <td><b>32.7</b><small>相對大盤 -6.2%</small></td>
+          <td><b>量比 0.72</b><small>確認分 -4.2</small><small class="risk">收盤跌破20日線；近20日弱於大盤；法人買盤減速</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>-0.01 pp</b><small>1000張 -0.45 pp</small></td>
+          <td><span class="positive">單月營收年增 +14.6%；累計營收年增 +37.2%；2026 Q2 累計 EPS 17.59</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=2308" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 946.7</b><small>估值帶 628.0–1,573</small><small>現價 1,640 · 高於估值帶 · 距基準 -42.3%</small><small>2026 Q2 累計 EPS 17.59 → 年化 35.18</small><small>電子零組件同業 P/E 17.85／26.91／44.70 · n=148 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>中性分歧 +0.0</b><small>熱度 52 / 信心 30</small><small class="risk">情籌混合</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMi0ANBVV95cUxPY1pYVEMtSDhHSk5veUlLcnRvbVVLSmJ2b1BEUTV2bldrWXIyOUZLZWhCa1VXemJrbE5Xd252T2tFR0dXNGNadXlORE5ma0lHbmw3V2wzaHRVUXZZV1BldUQ4QlBCNzhWclJMUnk2eDY4dWRDbmRaQW44MmowQ3ZtWV9QSXhXaTNCbVJSU3djbE5wSHF6dmpJeHZLeVAtcUttcG0yWjNlSGxKTFkxWUY4dncwRlJ5ZnA2QmpyUW82emhSMEMwN2hKS0dRUkotRGp0REFhSEdNNU41X2dRcUxhblo0RXVpOW9sZTliQm9JbzUwdEd2OENtYzQ5enVSZmNQSXdnRk5FZ3FoZG5uYk4tdUhJQVpVLTFHMzNuMW1hWmhKdlh3dnZmeVhPcEI1N2t2S1VjYnlIQ1NhaXdsaXQ1MWRyQkZCZ2RRVWZqQ09qV0RnUkMtNEVkMUxWc0xlTk1GbGt0Q2ZaM3VFeFh4MTRYUDlPV1F4b3hHWUJvdTJ3OVFhY0gzZ0FQVFFmSXVxdUFFcy1Ib2J4NFZmYWJkSG9obWMwOUlNNDRiaFpGeXVMSmVGNEZYemRrRUlFR2pMdTltTk9kNC1VckJ1dmtxRXEyaQ?oc=5" target="_blank" rel="noreferrer">日月光崩4%、台達電挫2%！台積電重摔30元至2390元台股慘綠開低跌867點丟了47000點大關<small>Yahoo股市 · 10/19</small></a><a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTFBjbFpPWURxSXNNZHpSV0wtTlctczhqU3JNMGVqa014RFlwcW1GbFljMEdpc1ZVeUlFUFBjSDhxa2NWc2taUWxOdDU3RQ?oc=5" target="_blank" rel="noreferrer">AI慘綠一片！AMAX-KY摜跌停、創意逆勢噴3% 台達電強撐盤下法人看旺：Q4營收有望雙位數成長<small>FTNN 新聞網 · 10/19</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=2472" target="_blank" rel="noreferrer"><strong>2472</strong> 立隆電</a><small class="status status-risk">風險警示 · 36 分</small><small>迴避，等待籌碼翻正</small></td>
+          <td><b>-3.9</b><small>法人 -4,227 張 / 3 天</small></td>
+          <td><b class="status status-risk">未命中 · 51</b><small>法人買盤加速；買超具延續性；基本面有支撐；留意未站月線、中期均線未翻多</small></td>
+          <td><b>+2,557 張</b><small>近3日 -1,372 / 連續 +2 日</small></td>
+          <td><b>47.4</b><small>相對大盤 -0.5%</small></td>
+          <td><b>量比 0.71</b><small>確認分 +0.1</small><small class="risk">收盤跌破20日線；20日線低於60日線</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>-5.93 pp</b><small>1000張 -6.87 pp</small></td>
+          <td><span class="positive">單月營收年增 +39.5%；累計營收年增 +26.1%；2026 Q2 累計 EPS 3.98</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=2472" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 218.3</b><small>估值帶 142.1–357.2</small><small>現價 214.0 · 估值帶內 · 距基準 +2.0%</small><small>2026 Q2 累計 EPS 3.98 → 年化 7.96</small><small>電子零組件同業 P/E 17.85／27.43／44.87 · n=148 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>樣本不足 +0.0</b><small>熱度 0 / 信心 0</small><small class="risk">情緒樣本不足</small></td>
+          <td class="news"><span>近期沒有通過股票語境篩選的新聞</span></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=6139" target="_blank" rel="noreferrer"><strong>6139</strong> 亞翔</a><small class="status status-risk">風險警示 · 5 分</small><small>迴避，等待籌碼翻正</small></td>
+          <td><b>-6.5</b><small>法人 -5,129 張 / 0 天</small></td>
+          <td><b class="status status-risk">未命中 · 20</b><small>基本面有支撐；流動性足夠；留意未站月線、中期均線未翻多</small></td>
+          <td><b>-60 張</b><small>近3日 -3,137 / 連續 -10 日</small></td>
+          <td><b>29.5</b><small>相對大盤 -8.3%</small></td>
+          <td><b>量比 0.58</b><small>確認分 -4.7</small><small class="risk">收盤跌破20日線；20日線低於60日線；近20日弱於大盤；成交量不足；法人買盤減速</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>-1.47 pp</b><small>1000張 -1.44 pp</small></td>
+          <td><span class="positive">單月營收年增 +6.0%；累計營收年增 +52.2%；2026 Q2 累計 EPS 25.91</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=6139" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 1,071</b><small>估值帶 762.8–1,758</small><small>現價 663.0 · 低於估值帶 · 距基準 +61.5%</small><small>2026 Q2 累計 EPS 25.91 → 年化 51.82</small><small>其他電子同業 P/E 14.72／20.66／33.92 · n=66 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>樣本不足 +0.0</b><small>熱度 31 / 信心 10</small><small class="risk">情緒樣本不足</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiQkFVX3lxTE1kOG1QbmV6bTltSTg5UVF2d3E1M3NKTGxiZU12THVjYzZDOU9YbmtMY1JJV2pDbjNfZW51dElBcC05dw?oc=5" target="_blank" rel="noreferrer">廠房工程股9月營收：亞翔106.97億元 帆宣年增88.49%<small>墨新聞-MORE News · 10/19</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr>
+        <tr>
+          <td><a class="stock-link" href="https://norway.twsthr.info/StockHolders.aspx?stock=6239" target="_blank" rel="noreferrer"><strong>6239</strong> 力成</a><small class="status status-risk">風險警示 · 11 分</small><small>迴避，等待籌碼翻正</small></td>
+          <td><b>-4.8</b><small>法人 -8,610 張 / 2 天</small></td>
+          <td><b class="status status-risk">未命中 · 41</b><small>中期均線偏多；基本面有支撐；流動性足夠；留意未站月線、法人籌碼偏弱</small></td>
+          <td><b>-10,303 張</b><small>近3日 -10,087 / 連續 -1 日</small></td>
+          <td><b>39.7</b><small>相對大盤 -6.3%</small></td>
+          <td><b>量比 0.88</b><small>確認分 -5.3</small><small class="risk">收盤跌破20日線；近20日弱於大盤；法人買盤減速</small></td>
+          <td><b>-%</b><small>融資 - 張 / 融券 - 張</small></td>
+          <td><b>-0.98 pp</b><small>1000張 -1.33 pp</small></td>
+          <td><span class="positive">單月營收年增 +27.0%；累計營收年增 +30.3%；2026 Q2 累計 EPS 5.50</span><small class="risk">仍需觀察下一期財報延續性</small><a class="source-link" href="https://mops.twse.com.tw/mops/#/web/home/company?code=6239" target="_blank" rel="noreferrer">來源：公開資訊觀測站</a></td>
+          <td><b>基準 NT$ 286.2</b><small>估值帶 185.6–499.6</small><small>現價 263.0 · 估值帶內 · 距基準 +8.8%</small><small>2026 Q2 累計 EPS 5.50 → 年化 11.00</small><small>半導體同業 P/E 16.87／26.02／45.42 · n=148 · 信心中等</small><small class="risk">以 Q2 累計 EPS 年化，不等同分析師全年預估</small><a class="source-link" href="https://www.twse.com.tw/rwd/zh/afterTrading/BWIBBU_d?date=20261019&amp;selectType=ALL&amp;response=html" target="_blank" rel="noreferrer">來源：TWSE／TPEx 每日本益比</a></td>
+          <td><b>偏空 -29.7</b><small>熱度 52 / 信心 30</small><small class="risk">情籌雙弱</small></td>
+          <td class="news"><a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE5jOWNIZlQtRHk2b3hENG1BZkdLUUt4ZVlPQmszdHd6X0tvQnN4RmN1MlNiTGtRUzVLZThVODQyekR4X0tpcVpscHZ1UWRjVVFxbWlaUEtlZVlrUmtCUWR1SUVKa1dOdlI4anc?oc=5" target="_blank" rel="noreferrer">記憶體股1表評》狗都嫌？南亞科、華邦電、群聯、旺宏、力成、十銓、威剛...法人「13選2」：目標價也說了- 上市櫃<small>中時新聞網 · 10/19</small></a><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPZmxtNGhtUS14ZmNJVXJwTnhGOUxlZC1WQWU4QkxoeUxiaUVIZEtYMTlIejNUdU9zZmQwdDZCYkhyQVJnZWdGN0ZsaGJrcUNOMXNiX1AwWFNSWERqcUg0cDl2dS16dXVwUnViTXNJbUE4LUdQLWNYY1l0R0pDa0pzY0hnNXpCcUhT?oc=5" target="_blank" rel="noreferrer">《投信賣超7-4》力成(504)、世紀鋼(451)、力麗(408)<small>富聯網 · 10/19</small></a></td>
+          <td class="news"><span>近期沒有明確提及本股的論壇樣本</span></td>
+        </tr></tbody></table></div>
+      </section>
+    
+  <section class="band history"><div class="section-head"><div><span class="eyebrow">BACKTEST</span><h2>長期規律追蹤</h2></div><p>每次訊號後自動補算1、5、10、20個交易日報酬；樣本不足時不做結論。</p></div><div class="history-grid"><figure><img src="historical_performance.png" alt="四類訊號歷史績效"></figure><div class="table-wrap"><table class="history"><thead><tr><th>訊號組別</th><th>1日</th><th>5日</th><th>10日</th><th>20日</th></tr></thead><tbody><tr><th>低檔集中</th><td><b>+0.20%</b><small>勝率 48% / n=224</small></td><td><b>+1.67%</b><small>勝率 54% / n=201</small></td><td><b>+3.98%</b><small>勝率 55% / n=196</small></td><td><b>+5.17%</b><small>勝率 56% / n=130</small></td></tr><tr><th>強勢過熱</th><td><b>+0.03%</b><small>勝率 45% / n=984</small></td><td><b>+0.31%</b><small>勝率 47% / n=866</small></td><td><b>+1.15%</b><small>勝率 48% / n=641</small></td><td><b>+1.99%</b><small>勝率 53% / n=374</small></td></tr><tr><th>價籌背離</th><td><b>-0.03%</b><small>勝率 44% / n=842</small></td><td><b>+0.63%</b><small>勝率 46% / n=791</small></td><td><b>+1.93%</b><small>勝率 44% / n=618</small></td><td><b>+5.54%</b><small>勝率 57% / n=322</small></td></tr><tr><th>同步轉弱</th><td><b>+0.10%</b><small>勝率 47% / n=1756</small></td><td><b>+0.27%</b><small>勝率 47% / n=1466</small></td><td><b>+2.04%</b><small>勝率 54% / n=1284</small></td><td><b>+5.19%</b><small>勝率 60% / n=946</small></td></tr></tbody></table></div></div></section>
+  <section class="band"><div class="section-head"><div><span class="eyebrow">SENTIMENT</span><h2>市場消息溫度</h2></div><p>新聞與公開論壇只作為情緒代理變數；反諷、同溫層和熱門事件都可能造成偏差，因此同步顯示樣本與信心度。</p></div><ul class="market-news"><li><a href="https://news.google.com/rss/articles/CBMi_ARBVV95cUxNNnFrQ3ZuYUNmcG15MlRWdl9IMXVDSWtQa1NKbFBWYXZwLVVNNFlQd2xMVW80MDVuLXZGUXMxMzZPWmk0aW16S0VjQVU4aW4tQkdrX2R4YU42X1lla2ZKNjBWYVg2bFpVWmkzV2dCOUpBUXJQNVo2RXZ4N3VOa04yLVNuYnBvYmZPSmdxeEtpM0M4UEs3Qk1sRVhDTUdmX3pxcHNkVFVJU3gzaldBNFBFcDN4OFNBRno4MWlWbEpQMTRORENyMXgtcWRuamVNOEtpaXpHOGR1YlFXLThSSUV0VndqQ0xwSzVBbENoRDRlUE13aGVmSy01Uzh0aVFoY1paQ013UWd5WTAtZUlWTlhFVmM4V2NpeU9PaWJkcEIyOVlOdzY2TGhmakRnWVlSeDh5aFB6amxXXzVKNE1iRHZQUERRQW8yOXA4UmE1cDNobEVlMjZrQlVGaGZrUVdNYmRJZ1FpU1NYMlRsN3pfaG1Ld24waVhpZmdpZjlqbmNMNExoTDdiMXlGUmlhTE1rcXh5WktZQlQ1U3UzOHZud1dNTDNNS1RVNkZnSW5zdWNBQUV4VDFkSmJYUUUwd3A4VGExbEctSDUyZzF0eHJTUm1fNy1PN0FuckhhT0pmS3NOYXc0Z2pmWjlSOU5xSjQ4VlVDbFFCTzBGcEstUTZOZXlDZkVzTnk4Y2RmUDZieEZLMlFEZUIwNlJZUm1JVzJqbTVuQ1lLNC1oV1h1QkFHSXV6aElFcHBDMnRWU3g3Q0J6VEhzSjk3RFJWcHdJbGNZMmZaWVJ0T25kbE1XWUl4cDN5QmRMSGk1WEZzUDVBdmFmek5VTDNIMkpKaU1sVjI?oc=5" target="_blank" rel="noreferrer">【1019台股盤後】台股下影線狂拉650點！外資轉買櫃買中小、投信持續買超，巴菲特護城河鎖定【聚陽】、【聯強】、【儒鴻】 - 永豐金證券</a><span>永豐金證券</span></li><li><a href="https://news.google.com/rss/articles/CBMisANBVV95cUxPYm1ZTVQ4YTNHUkZZVDFWUUthd3hXNkJCUnhlZEdZejgyUm56SFlfZlFpUWxFdi1GSVk3cHd5M0lEMFhrbVBRZTRGbUpCZThfUzJuaEthd3A2Z2twNEFMVVExX1VGMVhvTzRUalpUUzNuNHhiUkQ2cDN4TklOdFpDcnR2dHJHX2dVV1VyZDZ1bmlUQzBmSXpqMldmY3dFSE90WFZpd0YzSU9iR096aDY5UjNkSDNzVFhqU0tSdDFFMkJBNGJYQW5TVlUydFVLWEZWcUxwY1NKbUdNUE9pTUNvMTlETWR6YmltOV9Yc3VtbVNIdm9WZG9sOXV2eWFSWDlXMkxrX2lJNkhBaHlETld3UHBDVDNWUUtQMm1xdW13LW1zNFM2SUM4QjlIMmV4M0ViM1Vrd2tYN0x0bW81dWFzbTNlN0d3SnQ1NzRlZDdpbEFiWFRrcWRWX04tRnpxNzlOeDdYNGgyUWswcWI1WldJbkNYUUxmcy1NY0Zob3hrbFBjUlh0enBxanJtTjVZZzZqeTdhM1ZmMmZNcWF0a3Jld0R5NDNpbThuaVRSVWktaHA?oc=5" target="_blank" rel="noreferrer">台股開低走高收跌289點！外資連九賣累計提款7,600億、投信連七買持續對作 - Yahoo新聞</a><span>Yahoo新聞</span></li><li><a href="https://news.google.com/rss/articles/CBMiTkFVX3lxTFBNdkx6VzFmeUtfaC10dl85RHU3b0Q5b2ZDX1FMZHg3NGhQd2NnbjZQVGx1b0tyeGFJX09VOWJHSFFweXB6VENCMm5mR1VYdw?oc=5" target="_blank" rel="noreferrer">外資連9賣狂砍767億元！台股跌點收斂，是誰在護盤？ | 下班經濟學 | 財經 - 風傳媒</a><span>風傳媒</span></li><li><a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE4xS1ZpaFJSM2FGbU1odXBCekZoNHduTklKSEFwVnJLZkMzbXRCbWE5eGtwNFR0VVA3MFFjSTFJdTlmNnkzaXJQemhVTnJjbUNHb1Fja2R4R2dnanZXcTVIbWRNVU9yeUtycV90TDd3?oc=5" target="_blank" rel="noreferrer">外資繼續賣！9天提款7585億元 投信護航創今年第九大 - 中時新聞網</a><span>中時新聞網</span></li><li><a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTFA5dXlWVkxIaC1nRm1FQ3hGVU5nMFN3cS1FaTcwWTk2UXc0eUpoOEJUczZ6VnRrNmhOazFXTkNLblVRb2dvOTVZTHVURXJBZl9hSXdNWk0zMA?oc=5" target="_blank" rel="noreferrer">三大法人賣超900億 台股只跌289 網：不容小覷 - 東森新聞</a><span>東森新聞</span></li><li><a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE5yQjJJMG9qNVE0ZFRYME15VVpqZHZnQ1NLX2lmWEJabDdLcWV6LS1aU0RNVVkwQ3NLMWpFUl9yWDIxVG5OYjlrLXhhYkozaklnVF9NVll3dFVKQQ?oc=5" target="_blank" rel="noreferrer">外資繼續賣台積電、賣超461億 股民、投信聯手把台股買回4萬7千點 - 信傳媒</a><span>信傳媒</span></li><li><a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE5CYmpPcjl6NDU4VjZoZlZ5d2xaSTRVcUZzODNIVnNaeElKejJQM2lsTW1hakp2bmFSd2hOWUM1ZXMzck1qM3ZrOTBCRno4YVY1YXU2eGlDT1JBdjhTZFIw?oc=5" target="_blank" rel="noreferrer">外資提款200億、投信逆勢狂接！台股49K得而復失分析師看AI升級趨勢未變- 證券 - 工商時報</a><span>工商時報</span></li><li><a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQOE9rM01FNjVpRXZYN1Nmd2dNWVZ4LXJPLWZvbjUwY1pLbjM0OTg5R2VmWE8tOHM2b0JVeHcwTzFZM1ZBem5mLXdWai03WGswWnZyWWw0YjZiVTU0d3VZQmprNkxzcFkzMTZhX2JxazBlNzlFN3VZbkJIWUp4NFFIOFNDSDYwUjA1?oc=5" target="_blank" rel="noreferrer">台股週報》外資狂賣逃殺轉進傳產金融- 財經新聞 - PChome Online 新聞</a><span>PChome Online 新聞</span></li></ul></section>
+</main><footer>資料來源：TWSE、TPEx、MOPS OpenAPI、TDCC／神秘金字塔、Google News RSS、PTT Stock 公開頁面、Yahoo價格資料。EPS × P/E 為歷史累計 EPS 年化的相對估值篩選，未採用分析師預估 EPS，不能視為法人目標價或買賣建議。</footer>
+</body></html>
